@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f225d6fff12b425784691f6b79fcdbc, type: 3}
+  m_Name: New energy
+  m_EditorClassIdentifier: 
+  name: New energy
+  pollution: 0
+  population: 0
+  energy: 2
+  resource: 0
+  cost_energy: 2
+  cost_resource: 6
+  maxnum: 7
+  factory_outlook: {fileID: -2432090755550338912, guid: 1e4489831ab89499a9f5c56ee8182e11,
+    type: 3}
+  mySprite: {fileID: 21300000, guid: fc3da8ea6f8a64825bcb25ff93103908, type: 3}

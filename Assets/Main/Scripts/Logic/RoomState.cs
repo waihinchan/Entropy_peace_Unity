@@ -48,6 +48,9 @@ using UnityEngine;
             yield break;
         }
         public virtual IEnumerator EndState(){
+            if(runningRoom.roomInitInfo!=null){ //awake的时候init了房间信息,这里是等待满人初始化所有玩家的信息(本场牌局能用的建筑、初始金钱等等)
+                runningRoom.init_player(); 
+            }
             runningRoom.CurrentState = new StartGame(runningRoom,runningRoom.StartCountDown); 
             //结束状态,除了做其他处理以外,进入到下一个新的状态.等待玩家的下一个状态是开始游戏/或者是直接这个房间就消失了之类的.
             //然后把房间的当前状态转移到下一个状态,然后让房间的当前状态启用它自己的维护.
@@ -118,6 +121,10 @@ using UnityEngine;
                     yield break;
                 }
                 currentCountDown--;
+                // senddatatocurrentplayer(); //每一秒的倒计时都发送信息给玩家告诉他当前的剩余时间.
+            }
+            if(currentCountDown<=0){
+                runningRoom.Smallsettle(); //在移动到下一个之前,结算这个玩家的信息.(小回合结算)
             }
             if(CurrentPlayer.MoveNext()){ //上面回合倒计时结束之后就移动到下一个玩家
                 ResetState(); //重置计数器
@@ -149,6 +156,7 @@ using UnityEngine;
 
         }
         public override IEnumerator StartState(){
+            runningRoom.Bigsetttle(); //大回合结算,开始状态就是结算所有玩家.然后结算内会调用判断生命值的情况.如果生命值归0就游戏结束了.
             if(!runningRoom.game_end){ //判断是否游戏结束(这里的游戏结束是由房间内因为生命值归0实时更新的游戏结束状态)
                 if(runningRoom.CurrentTurn<=0){ //如果回合数走到最后一个回合,也代表回合结束.回合是由状态机来维护的.
                     runningRoom.game_end = true;
@@ -162,6 +170,15 @@ using UnityEngine;
         public override IEnumerator EndState(){
             if(!runningRoom.game_end){
                 Debug.Log($"Turns end in {runningRoom.CurrentTurn} / {runningRoom.TotalTurns}");
+                float nextTrunStartCountDown = 5;
+                Debug.Log($"Turns end in {runningRoom.CurrentTurn + 1} start in nextTrunStartCountDown secs");
+                while(nextTrunStartCountDown>0){ //下一个回合开始的倒计时.
+                    yield return new WaitForSeconds(1);
+                    nextTrunStartCountDown-=1;
+                    Debug.Log($"Turns end in {runningRoom.CurrentTurn + 1} start in nextTrunStartCountDown secs");
+                    //senddatatoallplayer(); //发送信息给所有玩家告诉他们剩余的时间
+                    yield break;
+                }
                 runningRoom.CurrentTurn--; //回合数-1
                 runningRoom.CurrentState = new InTruns(runningRoom,runningRoom.turnCountDown); //继续到下一个大回合
                 runningRoom.StartCoroutine(runningRoom.CurrentState.StartState());//开始维护轮换玩家的状态机

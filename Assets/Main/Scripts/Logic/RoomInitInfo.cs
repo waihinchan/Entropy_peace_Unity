@@ -5,16 +5,16 @@ using UnityEngine.UI;
 [CreateAssetMenu(fileName = "Room Base Information", menuName = "Room/Room Base Information", order = 1)]
 public class RoomInitInfo : ScriptableObject {
     
-    //这个只是暂时用于测试,因为后面这些内容可能需要根据玩家的人数进行变化,现阶段只是用于即时测试
+    //这个部分后面移植到游戏开始界面之类的来设置,保留两个版本是因为我们可以在引擎内直接测试.
     public float totalPollution = 100;
     public int totalRound = 15;
     public float eachRoundTime = 50; // secs
-    // public float rollCost = 3; //没有发牌就不需要这个了
     public float initGold = 100;
     public List<Factory_Type> factory_types; //这个部分assing给玩家,因为不需要发牌了
-    public int MaxNum = 1; //这个之前是用来计算卡牌出现的几率,这里先这样.
     public int totalPlayer = 2;
     public bool Debug = true;
+    public bool isHost = false;
+    public int maxPeople = 2; //比如说满人即开始之类的.
 
 }
 

@@ -9,17 +9,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7c91eb1f25b9742ffa3d43a7b3f48d55, type: 3}
-  m_Name: singlefactorytype
+  m_Script: {fileID: 11500000, guid: 7749ab59014e543ffb62fbc8242af0ea, type: 3}
+  m_Name: Room Base Information
   m_EditorClassIdentifier: 
-  name: 
-  description: 
-  pollution: 0
-  population: 0
-  energy: 0
-  resource: 0
-  cost_energy: 0
-  cost_resource: 0
-  maxnum: 5
-  factory_outlook: {fileID: 0}
-  mySprite: {fileID: 0}
+  totalPollution: 100
+  totalRound: 15
+  eachRoundTime: 50
+  initGold: 100
+  factory_types: []
+  totalPlayer: 2
+  Debug: 1
+  isHost: 0
+  maxPeople: 2

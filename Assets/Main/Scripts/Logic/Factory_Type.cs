@@ -9,7 +9,6 @@ public class Factory_Type : ScriptableObject {
     public float gen_pollution = 0; //产生的污染
     public float gen_gold = 0; 
     public float cost_gold = 0;
-    public float cost_resource = 0; //建造花费的污染
     public float recyle_gold = 0; //拆除返还的金币
     public GameObject factory_outlook; //这里绑一个prefab之类的
     

@@ -14,7 +14,7 @@ public class RoomInitInfo : ScriptableObject {
     public int totalPlayer = 2;
     public bool Debug = true;
     public bool isHost = false;
-    public int maxPeople = 2; //比如说满人即开始之类的.
+    public int StartCountDown = 10;
 
 }
 

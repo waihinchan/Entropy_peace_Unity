@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ChessBoard : MonoBehaviour
+public partial class ChessBoard : MonoBehaviour
 {
     // Start is called before the first frame update
     public int totalChessBass = 36; //最大棋盘数,其实这里棋盘数量应该是和人数有关系的..
@@ -14,10 +14,14 @@ public class ChessBoard : MonoBehaviour
     void Start()
     {   
 
-        PlaceChessBases();
+        PlaceChessBases(); //这里是游戏开始才初始化棋盘还是说直接进入这个场景就可以初始化棋盘还不确定
 
     }
+    public GameObject BuildChess(int index, Factory_Type whichFactory,Player owner){
+        return chessBasses[index].GetComponent<Chessbass>().buildFactoryOnTop(whichFactory,owner);
+    }
     void PlaceChessBases(){
+        chessBasses = new List<GameObject>();
         if(offset==null){
             offset = transform;
         }

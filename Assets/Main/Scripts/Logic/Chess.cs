@@ -9,9 +9,10 @@ public class Chess : MonoBehaviour
     public Factory_Type myFactory_Type{get;set;} // 这个是棋子类,和棋盘分开.
     public Player owner{get;set;} //有一个唯一id;
     Chessbass myChessbass; //所在棋盘的位置.
-    public Chess(Factory_Type _myFactory_Type, Chessbass _myChessbass){
+    public void initparams(Factory_Type _myFactory_Type, Chessbass _myChessbass,Player _owner){
         myFactory_Type = _myFactory_Type;
         myChessbass = _myChessbass;
+        owner = _owner;
     }
     void detectClick(){
         showGUI();

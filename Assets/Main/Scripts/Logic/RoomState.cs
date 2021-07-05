@@ -41,7 +41,15 @@ using UnityEngine;
         }
         public override IEnumerator UpdateState(){    
             while(waiting){ //这里需要写一下结束等待的条件,例如满人了或者玩家退出房间之类的.
-                Debug.Log("waiting for people");
+                if(runningRoom.roomInitInfo.Debug){
+                    Debug.Log("waiting for people");
+                }
+                if(runningRoom.gameStart){
+                    waiting = false;
+                    if(runningRoom.roomInitInfo.Debug){
+                        Debug.Log("Game start!");
+                    }
+                }
                 yield return null;
             }
             runningRoom.StartCoroutine(this.EndState()); //移动到下一个状态.
@@ -107,13 +115,16 @@ using UnityEngine;
         }
         public override IEnumerator UpdateState(){
             ResetState(); //先重置所有的计数器.
+            CurrentPlayer.MoveNext();
             runningRoom.StartCoroutine(this.EachPlayerCountDown()); //实际上的update维护是由下面的这个来做的
             yield break;
         }
-        IEnumerator EachPlayerCountDown(){
-            Player currentPlayer = CurrentPlayer.Value as Player;
-
-            Debug.Log($"Current Player is {currentPlayer.name}"); //当前指针指向的数值 -> 玩家 -> 姓名.
+        public IEnumerator EachPlayerCountDown(){
+            runningRoom.CurrentPlayer = CurrentPlayer.Value as Player; //告诉running room当前的玩家是谁.
+            runningRoom.sendInfoToPlayer(runningRoom.CurrentPlayer.ID,true); //回合开始指定是这个玩家的回合
+            if(runningRoom.roomInitInfo.Debug){
+                Debug.Log($"new small turn in big turn {runningRoom.CurrentTurn}  start! Current Player is {runningRoom.CurrentPlayer.name}"); //当前指针指向的数值 -> 玩家 -> 姓名.
+            }
             while(CheckState()){
                 yield return new WaitForSeconds(1);
                 if(runningRoom.game_end){ //每秒检测一次,除了单个玩家的倒计时以外还要判断游戏是否结束了,如果结束了直接终止这个协程并转移到下一个状态阶段
@@ -121,18 +132,31 @@ using UnityEngine;
                     yield break;
                 }
                 currentCountDown--;
+                if(runningRoom.roomInitInfo.Debug){
+                    Debug.Log($"small turn pass {currentCountDown} secs!");
+                }
                 // senddatatocurrentplayer(); //每一秒的倒计时都发送信息给玩家告诉他当前的剩余时间.
             }
             if(currentCountDown<=0){
-                runningRoom.Smallsettle(); //在移动到下一个之前,结算这个玩家的信息.(小回合结算)
+                if(runningRoom.roomInitInfo.Debug){
+                    Debug.Log($"now settle player  {runningRoom.CurrentPlayer.name} 's turns!");
+                }
+                runningRoom.sendInfoToPlayer(runningRoom.CurrentPlayer.ID,false); //结算完之后结束这个玩家的回合.让他不能操作.
+                runningRoom.Smallsettle(); //在移动到下一个之前,结算这个玩家的信息.(小回合结算) 
+                if(runningRoom.game_end){
+                    runningRoom.CurrentState = new TurnsEnd(runningRoom); //这个pass到回合结算阶段.回合结算阶段用于判断是否进入下一个回合还是直接结束游戏(如果说时间到了或者生命值归0)
+                    runningRoom.StartCoroutine(runningRoom.CurrentState.EndState());//开始维护轮换玩家的状态机 
+                }
             }
-            if(CurrentPlayer.MoveNext()){ //上面回合倒计时结束之后就移动到下一个玩家
+            if(CurrentPlayer.MoveNext()){ //上面回合倒计时结束之后就移动到下一个玩家 (TODO : 这里是协程,所以有一些结算的东西可能会不同步,比如说上面的结算可以给一个回调确认结算完毕再开始下一个玩家的回合)
                 ResetState(); //重置计数器
-                IEnumerator nextcoroutine = this.EachPlayerCountDown(); 
-                runningRoom.StartCoroutine(nextcoroutine);
+                IEnumerator nextsamllturn = this.EachPlayerCountDown(); 
+                runningRoom.StartCoroutine(nextsamllturn);
+                yield break;
             }
             else{ //到最后一个玩家,意味着这个回合结束了
                 runningRoom.StartCoroutine(this.EndState());
+                yield break;
             }
             yield break; //结束意味着单个玩家的小回合结束了,大回合还要再循环
         }
@@ -140,11 +164,12 @@ using UnityEngine;
             return (currentCountDown>0 && !runningRoom.game_end && !runningRoom.turn_end);
         }
         void ResetState(){
+            Debug.Log("Reset State!");
             runningRoom.turn_end = false; //重置玩家回合是否结束的标志
             currentCountDown = turnCountDown; //重置计数器
         }
         public override IEnumerator EndState(){
-            Debug.Log($"All player end their turns!");
+            Debug.Log("All player end their turns!");
             runningRoom.CurrentState = new TurnsEnd(runningRoom); //这个pass到回合结算阶段.回合结算阶段用于判断是否进入下一个回合还是直接结束游戏(如果说时间到了或者生命值归0)
             runningRoom.StartCoroutine(runningRoom.CurrentState.StartState());//开始维护轮换玩家的状态机 
             yield break;
@@ -156,9 +181,9 @@ using UnityEngine;
 
         }
         public override IEnumerator StartState(){
-            runningRoom.Bigsetttle(); //大回合结算,开始状态就是结算所有玩家.然后结算内会调用判断生命值的情况.如果生命值归0就游戏结束了.
+            // runningRoom.Bigsetttle(); //大回合结算,开始状态就是结算所有玩家.然后结算内会调用判断生命值的情况.如果生命值归0就游戏结束了.
             if(!runningRoom.game_end){ //判断是否游戏结束(这里的游戏结束是由房间内因为生命值归0实时更新的游戏结束状态)
-                if(runningRoom.CurrentTurn<=0){ //如果回合数走到最后一个回合,也代表回合结束.回合是由状态机来维护的.
+                if(runningRoom.CurrentTurn<=1){ //如果回合数走到最后一个回合,也代表回合结束.回合是由状态机来维护的.
                     runningRoom.game_end = true;
                 }
             }
@@ -171,13 +196,13 @@ using UnityEngine;
             if(!runningRoom.game_end){
                 Debug.Log($"Turns end in {runningRoom.CurrentTurn} / {runningRoom.TotalTurns}");
                 float nextTrunStartCountDown = 5;
-                Debug.Log($"Turns end in {runningRoom.CurrentTurn + 1} start in nextTrunStartCountDown secs");
+                Debug.Log($"Turns end in {runningRoom.CurrentTurn - 1} start in {nextTrunStartCountDown} secs");
                 while(nextTrunStartCountDown>0){ //下一个回合开始的倒计时.
-                    yield return new WaitForSeconds(1);
                     nextTrunStartCountDown-=1;
-                    Debug.Log($"Turns end in {runningRoom.CurrentTurn + 1} start in nextTrunStartCountDown secs");
+                    Debug.Log($"Turns end in {runningRoom.CurrentTurn - 1} start in {nextTrunStartCountDown} secs");
                     //senddatatoallplayer(); //发送信息给所有玩家告诉他们剩余的时间
-                    yield break;
+                    yield return new WaitForSeconds(1);
+                    
                 }
                 runningRoom.CurrentTurn--; //回合数-1
                 runningRoom.CurrentState = new InTruns(runningRoom,runningRoom.turnCountDown); //继续到下一个大回合
@@ -197,6 +222,18 @@ using UnityEngine;
     public class End:RoomState{
         public End(Room _runningRoom):base(_runningRoom){
             //其他需要构造的东西.或者调用Room的GUI之类的东西
+        }
+        public override IEnumerator StartState(){
+            Debug.Log("State End!");
+            Debug.Log($"game end with {runningRoom.currentPollution} pollution ");
+            IDictionaryEnumerator tempEnumerator = runningRoom.playerList.GetEnumerator();
+            while(tempEnumerator.MoveNext()){
+                Dictionary<string,float>  PrintEachRoundInfo;
+                Player printplayer = tempEnumerator.Value as Player;
+                PrintEachRoundInfo = printplayer.EachRoundInfo;
+                Debug.Log($"player {printplayer.name}'s gold is {PrintEachRoundInfo[constantString.current_generate_gold]}");
+            }
+            yield break;
         }
     }
  

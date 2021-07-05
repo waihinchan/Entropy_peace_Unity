@@ -198,6 +198,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7796769c474d2463595e58e8038d8ee5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  myChessBoard: {fileID: 476884172}
   roomInitInfo: {fileID: 11400000, guid: 48d64906a2e9b49c9b4f371628c7b433, type: 2}
 --- !u!4 &1587766752
 Transform:

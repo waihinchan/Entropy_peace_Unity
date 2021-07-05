@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Myself : MonoBehaviour
+public partial class Myself : MonoBehaviour
 {   
     public List<Factory_Type> Deck{get;set;} //玩家拥有的牌库.
     // Start is called before the first frame update
@@ -13,22 +13,26 @@ public class Myself : MonoBehaviour
     void Awake(){
 
     }
+    void stopMyTrun(){
+        //这里发送一个请求调用room里面的stopMyTrun function.
+        //这个后面转移到GUI的功能吧.
+    }
     void Start()
     {
         
     }
-
     // Update is called once per frame
     void Update()
     {
-        
+       
     }
+
     bool judgeBuild(float targetGold){
         //判断是否可以建筑的条件.如果符合就扣钱.然后外部再把我自己的信息发送出去.(因为还要更新建筑列表) 也可以让玩家提交一个建造的请求,在主机那里做运算.
         if (targetGold <= myself.EachRoundInfo[constantString.current_own_gold])
         {
             myself.EachRoundInfo[constantString.current_own_gold] -= targetGold;
-        return true;
+            return true;
         }
         else{
             return false;

@@ -12,16 +12,11 @@ public class ProxyManager:MonoBehaviour
     private GameInput inputServer;
     
     private Queue<ValueTuple<FuncCode, string>> outMsgQueue = new Queue<ValueTuple<FuncCode, string>>();
-
     private Thread sendThread;
-
     private Socket clientSocket;
     private Socket serverSocket;
-
     private ClientConfig proxyConfig;
-
     private string host;
-
     private int port;
     
     //消息处理器

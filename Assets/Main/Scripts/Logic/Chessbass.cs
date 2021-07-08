@@ -16,7 +16,7 @@ public class Chessbass : MonoBehaviour
         
     }
     public GameObject buildFactoryOnTop(Factory_Type whichFactory,Player _owner){
-        if(owner!=null){ //这里不知道为什么会出现重复建造的情况
+        if(owner!=null){ 
             Debug.LogError("this chessbass is not empty! function condition error!");
         }
         owner = _owner;

@@ -1,24 +1,38 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 public class Player
-{ 
-    
-    public int ID{get;set;} //这个作为客户端标识
+{
     public string name{get;set;} //玩家名字
-    public Dictionary<string,float> EachRoundInfo{get;set;}
-    //这个是玩家每回合产生的金币+污染和当前拥有的金钱和产生的总污染,用于回合结算.这个是由玩家当前拥有的建筑来进行计算的.
-    //key字段参考constantString.
-    public List<Chess> ownChess{get;set;} //这个是玩家当前拥有的建筑
-    public bool myTurn = false;
+    public Dictionary<string,float> EachRoundInfo = new Dictionary<string, float>();
+    public List<Chess> ownChess = new List<Chess>();
+
+    public Player(string name)
+    {
+        this.name = name;
+    }
+
+    public void AddChess(Chess chess)
+    {
+        ownChess.Add(chess);
+    }
+    
+    public void RemoveChess(Chess chess)
+    {
+        ownChess.Remove(chess);
+    }
+    
+
+    // 结算数据
     public void SubmitAllValue(){ //每回合调用一次更新自己的信息
-        EachRoundInfo[constantString.current_generate_pollution] = 0;
-        EachRoundInfo[constantString.current_generate_gold] = 0;
+        EachRoundInfo[ConstantString.current_generate_pollution] = 0;
+        EachRoundInfo[ConstantString.current_generate_gold] = 0;
         foreach(Chess chess in ownChess){
-            EachRoundInfo[constantString.current_generate_pollution]+= chess.myFactory_Type.gen_pollution; //
-            EachRoundInfo[constantString.current_generate_gold] += chess.myFactory_Type.gen_gold;
+            EachRoundInfo[ConstantString.current_generate_pollution]+= chess.FactoryType.GenPollution; //
+            EachRoundInfo[ConstantString.current_generate_gold] += chess.FactoryType.GenGold;
         }
-        EachRoundInfo[constantString.current_own_gold] += EachRoundInfo[constantString.current_generate_gold]; //更新自己拥有的金币信息
+        EachRoundInfo[ConstantString.current_own_gold] += EachRoundInfo[ConstantString.current_generate_gold]; //更新自己拥有的金币信息
     }
 
 }

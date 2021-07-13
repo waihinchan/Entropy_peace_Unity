@@ -6,8 +6,8 @@ public class GameInput
 {
     public void HeartBeats(string data, ProxyManager manager)
     {
-        var req = JsonUtility.FromJson<EmptyReq>(data);
-        var backReq = JsonUtility.ToJson(new EmptyReq());
+        var req = JsonUtility.FromJson<Empty>(data);
+        var backReq = JsonUtility.ToJson(new Empty());
         manager.Call(FuncCode.HeartBeatsBack, backReq);
     }
 
@@ -17,4 +17,23 @@ public class GameInput
             .TotalSeconds);
     }
 
+    // 客机请求主机开始游戏
+    public void GiveUserInfo(string data, ProxyManager manager)
+    {
+        var userInfo = JsonUtility.FromJson<GiveUserInfo>(data);
+        manager.userManager.MasterGameStart(userInfo.UserName);
+    }
+    
+    // 主机回复客机，开始游戏
+    public void GiveGameInfo(string data, ProxyManager manager)
+    {
+        var gameInfo = JsonUtility.FromJson<GiveGameInfo>(data);
+        manager.userManager.SlaverGameStart(gameInfo);
+    }
+    
+    public void Settle(string data, ProxyManager manager)
+    {
+        var settle = JsonUtility.FromJson<Settle>(data);
+    }
+    
 }

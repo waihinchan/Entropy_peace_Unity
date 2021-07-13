@@ -7,10 +7,11 @@ using System.Threading;
 using Main.Scripts.Proxy;
 using UnityEngine;
 
-public class ProxyManager:MonoBehaviour
+public class ProxyManager
 {
+    public UserManager userManager;
+
     private GameInput inputServer;
-    
     private Queue<ValueTuple<FuncCode, string>> outMsgQueue = new Queue<ValueTuple<FuncCode, string>>();
     private Thread sendThread;
     private Socket clientSocket;
@@ -25,6 +26,12 @@ public class ProxyManager:MonoBehaviour
     //定时器
     System.Timers.Timer timer = new System.Timers.Timer(1000);
 
+    public ProxyManager(UserManager userManager)
+    {
+        this.userManager = userManager;
+        Start();
+    }
+    
     public void Start()
     {
         inputServer = new GameInput();
@@ -60,7 +67,7 @@ public class ProxyManager:MonoBehaviour
         timeDelay = timeBack - timeGo;
         timeGo = Convert.ToInt64((DateTime.Now - new DateTime(1970, 1, 1, 0, 0, 0, 0))
             .TotalSeconds);
-        Call(FuncCode.HeartBeats, JsonUtility.ToJson(new EmptyReq()));
+        Call(FuncCode.HeartBeats, JsonUtility.ToJson(new Empty()));
         timer.Start();
     }
     
@@ -81,8 +88,14 @@ public class ProxyManager:MonoBehaviour
         }
         clientSocket = serverSocket.EndAccept(ar);
         clientSocket.BeginReceive(msg.Data, msg.StartIndex, msg.RemainSize, SocketFlags.None, ReceiveCallback, null);
+        Debug.Log("连接进客户端！！！");
     }
 
+    private bool IsConnectComplete()
+    {
+        return clientSocket != null;
+    }
+    
     private void FunctionInvoke(string functionName, string data)
     {
         OnCall(functionName, data);
@@ -113,7 +126,7 @@ public class ProxyManager:MonoBehaviour
         }
         catch (Exception e)
         {
-            Debug.Log("无法连接到服务器端，请检查您的网络！！" + e);
+            Debug.Log("无法连接到主机！！" + e);
             return false;
         }
 

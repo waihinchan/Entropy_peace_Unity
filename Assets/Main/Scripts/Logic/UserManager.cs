@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.PlayerLoop;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class UserInfo
 {
@@ -16,8 +17,8 @@ public class UserInfo
 
 public class UserManager : MonoBehaviour
 {
-    private ClientConfig proxyConfig;
     // 游戏初始化数据，由主机指定
+    public ClientConfig ProxyConfig;
     public GameInitInfo GameInitInfo;
     public LocalUserInfo LocalUserInfo;
     
@@ -27,11 +28,11 @@ public class UserManager : MonoBehaviour
     
     private void Start()
     {
+        ProxyManager = new ProxyManager(this);
         if (GameInitInfo == null)
         {
             return;
         }
-
         foreach (var type in GameInitInfo.FactoryTypes)
         {
             GameUtil.RegisterType(type.Name, type);
@@ -40,7 +41,7 @@ public class UserManager : MonoBehaviour
 
     private void Awake()
     {
-        DontDestroyOnLoad(gameObject);
+        DontDestroyOnLoad(transform.gameObject);
     }
 
     public void CreateRoom()
@@ -54,6 +55,12 @@ public class UserManager : MonoBehaviour
         Debug.Log("房间启动中,等待加入");
     }
 
+    public void JoinRoom()
+    {
+        var host = GameObject.Find("Canvas/Ip/Text").GetComponent<Text>().text;
+        JoinRoom(host);
+    }
+    
     public void JoinRoom(string host)
     {
         if (LocalUserInfo.GameMoney < 20)
@@ -95,7 +102,6 @@ public class UserManager : MonoBehaviour
                 InitGold = GameInitInfo.InitGold,
                 TotalPollution = GameInitInfo.TotalPollution,
                 TotalRound = GameInitInfo.TotalRound,
-                IsMyTurn = GameInitInfo.IsMyTurn,
                 EachRoundTime = GameInitInfo.EachRoundTime,
             }));
         // ui跳转
@@ -117,7 +123,6 @@ public class UserManager : MonoBehaviour
         GameInitInfo.InitGold = gameInfo.InitGold;
         GameInitInfo.TotalPollution = gameInfo.TotalPollution;
         GameInitInfo.TotalRound = gameInfo.TotalRound;
-        GameInitInfo.IsMyTurn = gameInfo.IsMyTurn;
         GameInitInfo.EachRoundTime = gameInfo.EachRoundTime;
         Debug.Log("当前为从机，跳转到下一界面");
         // ui跳转

@@ -9,13 +9,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d1d64e053b6c34fad8233c9fe560f35f, type: 3}
+  m_Script: {fileID: 11500000, guid: 58184890d8b94f9d832c803f47771bf9, type: 3}
   m_Name: Factory3
   m_EditorClassIdentifier: 
-  name: Factory3
-  description: 
-  gen_pollution: -1
-  gen_gold: -1
-  cost_gold: 10
-  recyle_gold: 0
-  factory_outlook: {fileID: 6766913996039698072, guid: c359258c7dd624354a7aea530f331030, type: 3}
+  Name: ccc
+  Description: 
+  GenPollution: 13
+  GenGold: 13
+  CostGold: 13
+  RecyleGold: 13
+  FactoryOutlook: {fileID: 6766913996039698072, guid: c359258c7dd624354a7aea530f331030, type: 3}

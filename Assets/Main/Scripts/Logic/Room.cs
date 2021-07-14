@@ -36,7 +36,7 @@ public partial class Room : MonoBehaviour
     
     public void Start()
     {
-        UserManager = GetComponent<UserManager>();
+        UserManager = GameObject.Find("Manager").GetComponent<UserManager>();
         MyPlayer = new Player(UserManager.MyUserInfo.UserName);
         OpPlayer = new Player(UserManager.OpUserInfo.UserName);
     }
@@ -102,6 +102,12 @@ public partial class Room : MonoBehaviour
         gameContex.MyDone = false;
         gameContex.TurnTime = 0;
         gameContex.TurnCount += 1;
+
+        if (IsGameEnd)
+        {
+            Debug.Log("Game over!!!");
+            return;
+        }
     }
 
     public void SettleChess(List<ValueTuple<FactoryType, ValueTuple<int,int>>> turnChessList, Player player)

@@ -31,7 +31,6 @@ public class GiveGameInfo
     public float EachRoundTime = 50; // secs
     public float InitGold = 100;
     public List<string> FactoryTypesName; //这个部分assing给玩家,因为不需要发牌了
-    public bool IsMyTurn;
 }
 
 [Serializable] 

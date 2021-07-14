@@ -29,6 +29,7 @@ public class ProxyManager
     public ProxyManager(UserManager userManager)
     {
         this.userManager = userManager;
+        this.proxyConfig = userManager.ProxyConfig;
         Start();
     }
     

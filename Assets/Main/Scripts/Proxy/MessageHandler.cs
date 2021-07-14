@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using UnityEngine;
 
 namespace Main.Scripts.Proxy
 {
@@ -34,7 +35,7 @@ namespace Main.Scripts.Proxy
                 if ((startIndex - 4) >= count)
                 {
                     FuncCode funcCode = (FuncCode)BitConverter.ToInt32(data, 4);
-                    
+                    Debug.Log("调用函数："+funcCode.ToString());
                     string modelStr = Encoding.UTF8.GetString(data, 12, count - 8);
                     funInvoke(funcCode.ToString(), modelStr);
                     Array.Copy(data, count + 4, data, 0, startIndex - 4 - count);

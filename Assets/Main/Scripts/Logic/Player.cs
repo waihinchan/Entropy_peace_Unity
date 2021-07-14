@@ -26,13 +26,13 @@ public class Player
 
     // 结算数据
     public void SubmitAllValue(){ //每回合调用一次更新自己的信息
-        EachRoundInfo[ConstantString.current_generate_pollution] = 0;
-        EachRoundInfo[ConstantString.current_generate_gold] = 0;
+        EachRoundInfo[ConstantString.CurrentGeneratePollution] = 0;
+        EachRoundInfo[ConstantString.CurrentGenerateGold] = 0;
         foreach(Chess chess in ownChess){
-            EachRoundInfo[ConstantString.current_generate_pollution]+= chess.FactoryType.GenPollution; //
-            EachRoundInfo[ConstantString.current_generate_gold] += chess.FactoryType.GenGold;
+            EachRoundInfo[ConstantString.CurrentGeneratePollution]+= chess.FactoryType.GenPollution; //
+            EachRoundInfo[ConstantString.CurrentGenerateGold] += chess.FactoryType.GenGold;
         }
-        EachRoundInfo[ConstantString.current_own_gold] += EachRoundInfo[ConstantString.current_generate_gold]; //更新自己拥有的金币信息
+        EachRoundInfo[ConstantString.CurrentOwnGold] += EachRoundInfo[ConstantString.CurrentGenerateGold]; //更新自己拥有的金币信息
     }
 
 }

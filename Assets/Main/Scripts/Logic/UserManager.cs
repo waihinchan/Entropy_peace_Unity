@@ -123,7 +123,7 @@ public class UserManager : MonoBehaviour
             }));
         
         // ui跳转
-        // SceneManager.LoadScene("");
+        SceneManager.LoadScene("Room");
     }
     
     // 客机开始游戏
@@ -143,8 +143,9 @@ public class UserManager : MonoBehaviour
         GameInfo.EachRoundTime = gameInfo.EachRoundTime;
         GameInfo.TotalRound = gameInfo.TotalRound;
         Debug.Log("当前为从机，跳转到下一界面");
+        
         // ui跳转
-        // SceneManager.LoadScene("");
+        SceneManager.LoadScene("Room");
     }
 }
 

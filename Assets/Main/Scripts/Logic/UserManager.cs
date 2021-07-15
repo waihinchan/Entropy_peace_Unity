@@ -121,6 +121,11 @@ public class UserManager : MonoBehaviour
                 TotalRound = GameInitInfo.TotalRound,
                 EachRoundTime = GameInitInfo.EachRoundTime,
             }));
+        
+        var reqData = JsonUtility.ToJson(new Empty());
+        Debug.Log("心跳");
+        ProxyManager.Call(FuncCode.HeartBeats, reqData);
+
         // ui跳转
         // SceneManager.LoadScene("");
     }
@@ -141,7 +146,20 @@ public class UserManager : MonoBehaviour
         GameInfo.TotalPollution = gameInfo.TotalRound;
         GameInfo.EachRoundTime = gameInfo.EachRoundTime;
         GameInfo.TotalRound = gameInfo.TotalRound;
-
+        
+        var reqData = JsonUtility.ToJson(new Empty());
+        Debug.Log("心跳");
+        ProxyManager.Call(FuncCode.HeartBeats, reqData);
+        ProxyManager.Call(FuncCode.GiveGameInfo, 
+            JsonUtility.ToJson(new GiveGameInfo()
+            {
+                MasterUserName = LocalUserInfo.UserName,
+                InitGold = GameInitInfo.InitGold,
+                TotalPollution = GameInitInfo.TotalPollution,
+                TotalRound = GameInitInfo.TotalRound,
+                EachRoundTime = GameInitInfo.EachRoundTime,
+            }));
+        
         Debug.Log("当前为从机，跳转到下一界面");
         // ui跳转
         // SceneManager.LoadScene("");

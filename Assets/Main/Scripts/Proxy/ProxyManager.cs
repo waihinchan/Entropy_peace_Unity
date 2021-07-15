@@ -69,6 +69,7 @@ public class ProxyManager
     public long timeGo = 0;
     public long timeBack = -1;
     public long timeDelay = -1;
+    
     public void KeepHeart(object sender, System.Timers.ElapsedEventArgs e)
     {
         timeDelay = timeBack - timeGo;
@@ -96,6 +97,7 @@ public class ProxyManager
         }
         clientSocket = serverSocket.EndAccept(ar);
         clientSocket.BeginReceive(msg.Data, msg.StartIndex, msg.RemainSize, SocketFlags.None, ReceiveCallback, null);
+        serverSocket.BeginAccept(AcceptCallback, null); //开始监听客户端的连接
         Debug.Log("连接进客户端！！！");
     }
 
@@ -117,6 +119,7 @@ public class ProxyManager
             int count = clientSocket.EndReceive(ar);
 
             msg.ReadMessage(count, FunctionInvoke);
+            clientSocket.BeginReceive(msg.Data, msg.StartIndex, msg.RemainSize, SocketFlags.None, ReceiveCallback, null);
         }
         catch (Exception e)
         {

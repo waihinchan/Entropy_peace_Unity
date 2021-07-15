@@ -15,19 +15,35 @@ public class UserInfo
     }
 }
 
+public class GameInfo
+{
+    public float TotalPollution = 100;
+    public int TotalRound = 15;
+    public float EachRoundTime = 50; // secs
+    public float InitGold = 100;
+    public List<FactoryType> FactoryTypes; //这个部分assing给玩家,因为不需要发牌了
+}
+
 public class UserManager : MonoBehaviour
 {
     // 游戏初始化数据，由主机指定
     public ClientConfig ProxyConfig;
     public GameInitInfo GameInitInfo;
     public LocalUserInfo LocalUserInfo;
-    
+    public GameInfo GameInfo;
     public ProxyManager ProxyManager;
     public UserInfo MyUserInfo;
     public UserInfo OpUserInfo;
     
     private void Start()
     {
+        GameInfo = new GameInfo();
+        GameInfo.FactoryTypes = GameInitInfo.FactoryTypes;
+        GameInfo.InitGold = GameInitInfo.InitGold;
+        GameInfo.TotalPollution = GameInitInfo.TotalRound;
+        GameInfo.EachRoundTime = GameInitInfo.EachRoundTime;
+        GameInfo.TotalRound = GameInitInfo.TotalRound;
+        
         ProxyManager = new ProxyManager(this);
         if (GameInitInfo == null)
         {
@@ -113,17 +129,18 @@ public class UserManager : MonoBehaviour
     {
         MyUserInfo = new UserInfo(LocalUserInfo.UserName);
         OpUserInfo = new UserInfo(gameInfo.MasterUserName);
-        GameInitInfo = new GameInitInfo();
+        GameInfo = new GameInfo();
         List<FactoryType> factoryTypes = new List<FactoryType>();
         foreach (var typeName in gameInfo.FactoryTypesName)
         {
             factoryTypes.Add(GameUtil.ConvertStringToFactory(typeName));
         }
-        GameInitInfo.FactoryTypes = factoryTypes;
-        GameInitInfo.InitGold = gameInfo.InitGold;
-        GameInitInfo.TotalPollution = gameInfo.TotalPollution;
-        GameInitInfo.TotalRound = gameInfo.TotalRound;
-        GameInitInfo.EachRoundTime = gameInfo.EachRoundTime;
+        GameInfo.FactoryTypes = factoryTypes;
+        GameInfo.InitGold = gameInfo.InitGold;
+        GameInfo.TotalPollution = gameInfo.TotalRound;
+        GameInfo.EachRoundTime = gameInfo.EachRoundTime;
+        GameInfo.TotalRound = gameInfo.TotalRound;
+
         Debug.Log("当前为从机，跳转到下一界面");
         // ui跳转
         // SceneManager.LoadScene("");

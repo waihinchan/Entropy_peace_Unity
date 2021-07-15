@@ -32,17 +32,16 @@ namespace Main.Scripts.Proxy
                 //粘包分包
                 if (startIndex <= 4) return;
                 int count = BitConverter.ToInt32(data, 0);
-                if ((startIndex - 4) >= count)
+                if ((startIndex - 4) < count)
                 {
-                    FuncCode funcCode = (FuncCode)BitConverter.ToInt32(data, 4);
-                    Debug.Log("调用函数："+funcCode.ToString());
-                    string modelStr = Encoding.UTF8.GetString(data, 12, count - 8);
-                    funInvoke(funcCode.ToString(), modelStr);
-                    Array.Copy(data, count + 4, data, 0, startIndex - 4 - count);
-                    startIndex -= (count + 4);
-                    return;
+                    break;
                 }
-                break;
+                FuncCode funcCode = (FuncCode)BitConverter.ToInt32(data, 4);
+                string modelStr = Encoding.UTF8.GetString(data, 8, count - 4);
+                Debug.Log("调用函数："+funcCode.ToString()+".参数："+modelStr);
+                funInvoke(funcCode.ToString(), modelStr);
+                Array.Copy(data, count + 4, data, 0, startIndex - 4 - count);
+                startIndex -= (count + 4);
             }
         }
         public static byte[] PackData(FuncCode funcCode, string data)

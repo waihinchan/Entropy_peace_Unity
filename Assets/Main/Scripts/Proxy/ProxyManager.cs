@@ -30,7 +30,13 @@ public class ProxyManager
     {
         this.userManager = userManager;
         this.proxyConfig = userManager.ProxyConfig;
-        Start();
+    }
+
+    ~ProxyManager()
+    {
+        sendThread.Abort();
+        serverSocket.Close();
+        CloseConnect();
     }
     
     public void Start()
@@ -68,7 +74,8 @@ public class ProxyManager
         timeDelay = timeBack - timeGo;
         timeGo = Convert.ToInt64((DateTime.Now - new DateTime(1970, 1, 1, 0, 0, 0, 0))
             .TotalSeconds);
-        Call(FuncCode.HeartBeats, JsonUtility.ToJson(new Empty()));
+        var reqData = JsonUtility.ToJson(new Empty());
+        Call(FuncCode.HeartBeats, reqData);
         timer.Start();
     }
     
@@ -147,6 +154,10 @@ public class ProxyManager
     
     public void CloseConnect()
     {
+        if (clientSocket == null)
+        {
+            return;
+        }
         clientSocket.Close();
         clientSocket = null;
     }
@@ -158,10 +169,16 @@ public class ProxyManager
             while (outMsgQueue.Count > 0)
             {
                 var requestInfo = outMsgQueue.Dequeue();
+                if (requestInfo.Item2 == null)
+                {
+                    continue;
+                }
+
                 byte[] bytes = MessageHandler.PackData(requestInfo.Item1, requestInfo.Item2);
                 try
                 {
                     clientSocket.Send(bytes);
+                    Debug.Log("调用rpc："+requestInfo.Item1+".参数"+requestInfo.Item2);
                 }
                 catch (Exception e)
                 {
@@ -169,7 +186,7 @@ public class ProxyManager
                     CloseConnect();
                 }
             }
-            Thread.CurrentThread.Join(100);//阻止设定时间
+            Thread.CurrentThread.Join(10);//阻止设定时间
         }
     }
 }

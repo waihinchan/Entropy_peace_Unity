@@ -6,7 +6,6 @@ public class GameInput
 {
     public void HeartBeats(string data, ProxyManager manager)
     {
-        var req = JsonUtility.FromJson<Empty>(data);
         var backReq = JsonUtility.ToJson(new Empty());
         manager.Call(FuncCode.HeartBeatsBack, backReq);
     }

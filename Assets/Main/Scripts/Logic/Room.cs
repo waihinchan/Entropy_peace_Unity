@@ -1,10 +1,6 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
-using System.ComponentModel.Design;
 using UnityEngine;
-using UnityEngine.UI;
-using UnityEngine.SceneManagement;
 //room的作用是计算,同时接收客户端的信息
 
 public class GameContex
@@ -26,7 +22,7 @@ public class GameContex
     }
 }
 
-public partial class Room : MonoBehaviour
+public class Room : MonoBehaviour
 {   
     public ChessBoard ChessBoard; //chessboard去获得player的信息,然后生成棋子在上面.
     public Player MyPlayer;
@@ -45,12 +41,12 @@ public partial class Room : MonoBehaviour
     {
         get
         {
-            if (gameContex.Pollution >= UserManager.GameInitInfo.TotalPollution)
+            if (gameContex.Pollution >= UserManager.GameInfo.TotalPollution)
             {
                 return true;
             }
 
-            if (gameContex.TurnCount > UserManager.GameInitInfo.TotalRound)
+            if (gameContex.TurnCount > UserManager.GameInfo.TotalRound)
             {
                 return true;
             }
@@ -87,7 +83,7 @@ public partial class Room : MonoBehaviour
         
         gameContex.TurnTime += Time.deltaTime;
         
-        if (gameContex.TurnCount >= UserManager.GameInitInfo.EachRoundTime)
+        if (gameContex.TurnCount >= UserManager.GameInfo.EachRoundTime)
         {
             StopMyTurn();
         }

@@ -33,6 +33,8 @@ public class GameInput
     public void Settle(string data, ProxyManager manager)
     {
         var settle = JsonUtility.FromJson<Settle>(data);
+        var room = GameObject.Find("Room").GetComponent<Room>();
+        room.OpSettle(settle.ChessList);
     }
     
 }

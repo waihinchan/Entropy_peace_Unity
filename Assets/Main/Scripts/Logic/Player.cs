@@ -6,7 +6,7 @@ public class Player
 {
     public string name{get;set;} //玩家名字
     public Dictionary<string,float> EachRoundInfo = new Dictionary<string, float>();
-    public List<Chess> ownChess = new List<Chess>();
+    public List<Chess> OwnChess = new List<Chess>();
 
     public Player(string name)
     {
@@ -15,20 +15,19 @@ public class Player
 
     public void AddChess(Chess chess)
     {
-        ownChess.Add(chess);
+        OwnChess.Add(chess);
     }
     
     public void RemoveChess(Chess chess)
     {
-        ownChess.Remove(chess);
+        OwnChess.Remove(chess);
     }
     
-
     // 结算数据
     public void SubmitAllValue(){ //每回合调用一次更新自己的信息
         EachRoundInfo[ConstantString.CurrentGeneratePollution] = 0;
         EachRoundInfo[ConstantString.CurrentGenerateGold] = 0;
-        foreach(Chess chess in ownChess){
+        foreach(Chess chess in OwnChess){
             EachRoundInfo[ConstantString.CurrentGeneratePollution]+= chess.FactoryType.GenPollution; //
             EachRoundInfo[ConstantString.CurrentGenerateGold] += chess.FactoryType.GenGold;
         }

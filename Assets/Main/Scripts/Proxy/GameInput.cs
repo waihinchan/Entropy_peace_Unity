@@ -33,7 +33,7 @@ public class GameInput
     public void Settle(string data, ProxyManager manager)
     {
         var settle = JsonUtility.FromJson<Settle>(data);
-        var room = GameObject.Find("Room").GetComponent<Room>();
+        var room = GameObject.Find("Game").GetComponent<GameManager>();
         if (room != null)
         {
             Debug.Log("调用失败");

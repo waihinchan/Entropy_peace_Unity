@@ -11,8 +11,12 @@ public class ChessBoard : MonoBehaviour
     public GameObject chessBass; //这个是棋盘的底座
     public Transform offset;
     public Chess[][] ChessMatrix;
+
+    private UserManager userManager;
+    
     void Start()
     {
+        userManager = GameObject.Find("Manager").GetComponent<UserManager>();
         InitChessBoard();
     }
 

@@ -60,6 +60,16 @@ public class UserManager : MonoBehaviour
         DontDestroyOnLoad(transform.gameObject);
     }
 
+    private volatile string loadSceneName = "";
+    public void Update()
+    {
+        if (loadSceneName!="")
+        {
+            SceneManager.LoadScene(loadSceneName);
+            loadSceneName = "";
+        }
+    }
+
     public void CreateRoom()
     {
         if (LocalUserInfo.GameMoney < 20)
@@ -123,7 +133,7 @@ public class UserManager : MonoBehaviour
             }));
         
         // ui跳转
-        SceneManager.LoadScene("Room");
+        loadSceneName = "Room";
     }
     
     // 客机开始游戏
@@ -145,7 +155,7 @@ public class UserManager : MonoBehaviour
         Debug.Log("当前为从机，跳转到下一界面");
         
         // ui跳转
-        SceneManager.LoadScene("Room");
+        loadSceneName = "Room";
     }
 }
 

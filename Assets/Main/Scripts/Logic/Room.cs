@@ -29,24 +29,26 @@ public class Room : MonoBehaviour
     public Player OpPlayer;
     private UserManager UserManager;
     private GameContex gameContex;
-    
+    private GameInfo gameInfo;
     public void Start()
     {
         UserManager = GameObject.Find("Manager").GetComponent<UserManager>();
         MyPlayer = new Player(UserManager.MyUserInfo.UserName);
         OpPlayer = new Player(UserManager.OpUserInfo.UserName);
+        gameInfo = UserManager.GameInfo;
+        gameContex = new GameContex(gameInfo.Id == gameInfo.FirstId);
     }
 
     public bool IsGameEnd
     {
         get
         {
-            if (gameContex.Pollution >= UserManager.GameInfo.TotalPollution)
+            if (gameContex.Pollution >= gameInfo.TotalPollution)
             {
                 return true;
             }
 
-            if (gameContex.TurnCount > UserManager.GameInfo.TotalRound)
+            if (gameContex.TurnCount > gameInfo.TotalRound)
             {
                 return true;
             }
@@ -83,7 +85,7 @@ public class Room : MonoBehaviour
         
         gameContex.TurnTime += Time.deltaTime;
         
-        if (gameContex.TurnCount >= UserManager.GameInfo.EachRoundTime)
+        if (gameContex.TurnCount >= gameInfo.EachRoundTime)
         {
             StopMyTurn();
         }

@@ -34,6 +34,11 @@ public class GameInput
     {
         var settle = JsonUtility.FromJson<Settle>(data);
         var room = GameObject.Find("Room").GetComponent<Room>();
+        if (room != null)
+        {
+            Debug.Log("调用失败");
+            return;
+        }
         room.OpSettle(settle.ChessList);
     }
     

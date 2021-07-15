@@ -114,6 +114,7 @@ public class UserManager : MonoBehaviour
         ProxyManager.Call(FuncCode.GiveGameInfo, 
             JsonUtility.ToJson(new GiveGameInfo()
             {
+                FactoryTypesName = factoryTypes,
                 MasterUserName = LocalUserInfo.UserName,
                 InitGold = GameInitInfo.InitGold,
                 TotalPollution = GameInitInfo.TotalPollution,

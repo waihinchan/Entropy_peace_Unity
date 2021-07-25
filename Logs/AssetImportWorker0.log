@@ -1,387 +1,647 @@
 Using pre-set license
+Built from '2020.3/china_unity/release' branch; Version is '2020.3.13f1c1 (93b9df9a3ddc) revision 9681375'; Using compiler version '192528614'; Build Type 'Release'
+OS: 'Windows 10 Pro; OS build 19042.572; Version 2009; 64bit' Language: 'zh' Physical Memory: 32665 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
 
  COMMAND LINE ARGUMENTS:
-/Applications/Unity/Hub/Editor/2020.3.0f1c1/Unity.app/Contents/MacOS/Unity
+C:\Program Files\Unity\Hub\Editor\2020.3.13f1c1\Editor\Unity.exe
 -adb2
 -batchMode
 -noUpm
 -name
 AssetImportWorker0
 -projectPath
-/Users/waihinchan/Documents/Entropy_peace_Unity
+D:/个人项目/Entropy_peace_Unity
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-65008
-Successfully changed project path to: /Users/waihinchan/Documents/Entropy_peace_Unity
-/Users/waihinchan/Documents/Entropy_peace_Unity
+51408
+Successfully changed project path to: D:/个人项目/Entropy_peace_Unity
+D:/个人项目/Entropy_peace_Unity
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 63.04 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 37.76 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Initialize engine version: 2020.3.0f1c1 (1e553bf703d9)
-[Subsystems] Discovering subsystems at path /Applications/Unity/Hub/Editor/2020.3.0f1c1/Unity.app/Contents/Resources/UnitySubsystems
-[Subsystems] Discovering subsystems at path /Users/waihinchan/Documents/Entropy_peace_Unity/Assets
+Initialize engine version: 2020.3.13f1c1 (93b9df9a3ddc)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.3.13f1c1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path D:/个人项目/Entropy_peace_Unity/Assets
 GfxDevice: creating device client; threaded=0
-2021-07-08 16:51:14.812 Unity[72696:3299131] Color LCD preferred device: Intel(R) UHD Graphics 630 (low power)
-2021-07-08 16:51:14.812 Unity[72696:3299131] Metal devices available: 2
-2021-07-08 16:51:14.812 Unity[72696:3299131] 0: AMD Radeon Pro 560X (high power)
-2021-07-08 16:51:14.812 Unity[72696:3299131] 1: Intel(R) UHD Graphics 630 (low power)
-2021-07-08 16:51:14.812 Unity[72696:3299131] Using device AMD Radeon Pro 560X (high power)
-Initializing Metal device caps: AMD Radeon Pro 560X
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce RTX 2060 (ID=0x1f08)
+    Vendor:   
+    VRAM:     5980 MB
+    Driver:   27.21.14.6192
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
 Initialize mono
-Mono path[0] = '/Applications/Unity/Hub/Editor/2020.3.0f1c1/Unity.app/Contents/Managed'
-Mono path[1] = '/Applications/Unity/Hub/Editor/2020.3.0f1c1/Unity.app/Contents/MonoBleedingEdge/lib/mono/unityjit'
-Mono config path = '/Applications/Unity/Hub/Editor/2020.3.0f1c1/Unity.app/Contents/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56696
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.3.13f1c1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.3.13f1c1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.3.13f1c1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56604
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
-Register platform support module: /Applications/Unity/Hub/Editor/2020.3.0f1c1/Unity.app/Contents/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll
-Registered in 0.000598 seconds.
-Native extension for OSXStandalone target not found
-Refreshing native plugins compatible for Editor in 36.43 ms, found 1 plugins.
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.13f1c1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.001332 seconds.
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 39.15 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.377 seconds
+- Completed reload, in  0.697 seconds
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.000887 seconds.
+Registered in 0.002058 seconds.
 Begin MonoManager ReloadAssembly
-Native extension for OSXStandalone target not found
-Refreshing native plugins compatible for Editor in 42.19 ms, found 1 plugins.
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 39.54 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.038 seconds
+- Completed reload, in  0.907 seconds
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
 Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Launching external process: /Applications/Unity/Hub/Editor/2020.3.0f1c1/Unity.app/Contents/Tools/UnityShaderCompiler
-Launched and connected shader compiler UnityShaderCompiler after 0.01 seconds
-Refreshing native plugins compatible for Editor in 0.41 ms, found 1 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.03 seconds
+Refreshing native plugins compatible for Editor in 0.47 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2435 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 178.6 MB.
-System memory in use after: 176.3 MB.
+Unloading 2713 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 125.9 MB.
+System memory in use after: 126.1 MB.
 
-Unloading 45 unused Assets to reduce memory usage. Loaded Objects now: 2843.
-Total: 5.117486 ms (FindLiveObjects: 0.405973 ms CreateObjectMapping: 0.184059 ms MarkObjects: 2.500722 ms  DeleteObjects: 2.024718 ms)
+Unloading 19 unused Assets to reduce memory usage. Loaded Objects now: 3148.
+Total: 2.189700 ms (FindLiveObjects: 0.267600 ms CreateObjectMapping: 0.137500 ms MarkObjects: 1.724300 ms  DeleteObjects: 0.059200 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  path: Assets/Deault/gui-游戏界面
+  artifactKey: Guid(707628bdcfb2ed148a9d4a56a71e3cef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Deault/gui-游戏界面 using Guid(707628bdcfb2ed148a9d4a56a71e3cef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '98c113dcfc03a40e02bd7ea6a8bd9d70') in 0.008093 seconds 
+  Import took 0.011420 seconds .
 
 ========================================================================
 Received Import Request.
-  path: Assets/Main/Scripts/Logic/Chessbass.cs
-  artifactKey: Guid(d844e6e63f730469fbeb5d63f22718b8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Main/Scripts/Logic/Chessbass.cs using Guid(d844e6e63f730469fbeb5d63f22718b8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b7cb12611b221481e9a107350eed7cbd') in 0.410323 seconds
-  Import took 0.416734 seconds .
+  Time since last request: 0.000140 seconds.
+  path: Assets/Deault/gui-游戏界面.zip
+  artifactKey: Guid(291a492dbee9b604588baeb711ec4b04) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Deault/gui-游戏界面.zip using Guid(291a492dbee9b604588baeb711ec4b04) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9c45b1664e1a291df8d4940a1dd68561') in 0.019852 seconds 
+  Import took 0.023012 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 2.373751 seconds.
-  path: Assets/Main/Scripts/Logic/RoomState.cs
-  artifactKey: Guid(15ea9b70c856e4558ab97de0774b0d9d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Main/Scripts/Logic/RoomState.cs using Guid(15ea9b70c856e4558ab97de0774b0d9d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3fccfb29e6464494a214bb1621c76e62') in 0.001875 seconds
-  Import took 0.006648 seconds .
+  Time since last request: 0.000146 seconds.
+  path: Assets/Deault/gui-游戏界面/gui-游戏界面/pic_number.png
+  artifactKey: Guid(1978234585b355a4181f18ea0d49752c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Deault/gui-游戏界面/gui-游戏界面/pic_number.png using Guid(1978234585b355a4181f18ea0d49752c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0a244a676208555f7aef952e63e4854a') in 0.030506 seconds 
+  Import took 0.034011 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.001836 seconds.
-  path: Assets/Main/Scripts/Logic/RoomState.cs
-  artifactKey: Guid(15ea9b70c856e4558ab97de0774b0d9d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Main/Scripts/Logic/RoomState.cs using Guid(15ea9b70c856e4558ab97de0774b0d9d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3fccfb29e6464494a214bb1621c76e62') in 0.002883 seconds
-  Import took 0.007788 seconds .
+  Time since last request: 0.000185 seconds.
+  path: Assets/Deault/gui-游戏界面/gui-游戏界面/btn_selectedcard_blue.png
+  artifactKey: Guid(39e250a8aa721c248be3729057c4f724) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Deault/gui-游戏界面/gui-游戏界面/btn_selectedcard_blue.png using Guid(39e250a8aa721c248be3729057c4f724) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '519dd82c3be6ff1cbe5c07142bdaebf7') in 0.008419 seconds 
+  Import took 0.012241 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.433363 seconds.
-  path: Assets/Main/Scripts/Logic/UserManager.cs
-  artifactKey: Guid(15f60ff754a84977beaa9cb811dc9610) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Main/Scripts/Logic/UserManager.cs using Guid(15f60ff754a84977beaa9cb811dc9610) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '38081bfd4c9c81fd00d67b13844690d9') in 0.001816 seconds
-  Import took 0.007128 seconds .
+  Time since last request: 0.000125 seconds.
+  path: Assets/Deault/gui-游戏界面/gui-游戏界面/pic_bg2.png
+  artifactKey: Guid(e1c8095e6331b3345a2cad3f71f229bd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Deault/gui-游戏界面/gui-游戏界面/pic_bg2.png using Guid(e1c8095e6331b3345a2cad3f71f229bd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '658311e6c16198adcf6404abd3875c10') in 0.008156 seconds 
+  Import took 0.011820 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 1.497884 seconds.
-  path: Assets/Main/Scripts/Logic/Room.cs
-  artifactKey: Guid(7796769c474d2463595e58e8038d8ee5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Main/Scripts/Logic/Room.cs using Guid(7796769c474d2463595e58e8038d8ee5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '80443d6ec8e81f908fc9c9bcf2aa3ffb') in 0.001726 seconds
-  Import took 0.006282 seconds .
+  Time since last request: 0.000149 seconds.
+  path: Assets/Deault/gui-游戏界面/gui-游戏界面/pic_shan_white.png
+  artifactKey: Guid(8c1a4cafb3b774b4381189a21c3cc4ff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Deault/gui-游戏界面/gui-游戏界面/pic_shan_white.png using Guid(8c1a4cafb3b774b4381189a21c3cc4ff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a633e8480507c1745a4c418ebac59d47') in 0.018130 seconds 
+  Import took 0.023679 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.022359 seconds.
-  path: Assets/Main/Scripts/Logic/Room.cs
-  artifactKey: Guid(7796769c474d2463595e58e8038d8ee5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Main/Scripts/Logic/Room.cs using Guid(7796769c474d2463595e58e8038d8ee5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '80443d6ec8e81f908fc9c9bcf2aa3ffb') in 0.001589 seconds
-  Import took 0.005469 seconds .
+  Time since last request: 0.000256 seconds.
+  path: Assets/Deault/gui-游戏界面/gui-游戏界面/pic_money.png
+  artifactKey: Guid(4275f256c98b9ba49930a6d20578d499) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Deault/gui-游戏界面/gui-游戏界面/pic_money.png using Guid(4275f256c98b9ba49930a6d20578d499) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0c5aa7f08dad5d124f5462ab9cf02f0c') in 0.007280 seconds 
+  Import took 0.011953 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000160 seconds.
+  path: Assets/Deault/gui-游戏界面/gui-游戏界面/pic_xinnengyuan.png
+  artifactKey: Guid(fa80911bbe036e94ca4364e298335f87) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Deault/gui-游戏界面/gui-游戏界面/pic_xinnengyuan.png using Guid(fa80911bbe036e94ca4364e298335f87) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '05298300131149eeb3087f7c953f39e9') in 0.008568 seconds 
+  Import took 0.012186 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000196 seconds.
+  path: Assets/Deault/gui-游戏界面/gui-游戏界面/btn_selectedcard_yellow.png
+  artifactKey: Guid(1a81f25d704dddb41bb606f3476b2fd6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Deault/gui-游戏界面/gui-游戏界面/btn_selectedcard_yellow.png using Guid(1a81f25d704dddb41bb606f3476b2fd6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a98e71fbe4b50388b8d492821bcb9fa8') in 0.007384 seconds 
+  Import took 0.011296 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000152 seconds.
+  path: Assets/Deault/gui-游戏界面/gui-游戏界面/pic_huihe_bg.png
+  artifactKey: Guid(2f75b3e9c52581e489207fa27cc54b43) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Deault/gui-游戏界面/gui-游戏界面/pic_huihe_bg.png using Guid(2f75b3e9c52581e489207fa27cc54b43) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5bea501d6a321a25bed75f8b01f931e5') in 0.010005 seconds 
+  Import took 0.013723 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000141 seconds.
+  path: Assets/Deault/gui-游戏界面/gui-游戏界面/btn_unselectcard_yellow.png
+  artifactKey: Guid(ff3e80310a43bb244991ddb69788bdc0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Deault/gui-游戏界面/gui-游戏界面/btn_unselectcard_yellow.png using Guid(ff3e80310a43bb244991ddb69788bdc0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f188db80147dce1bcad1bfb0ad437870') in 0.011226 seconds 
+  Import took 0.015031 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000163 seconds.
+  path: Assets/Deault/gui-游戏界面/gui-游戏界面/pic_sea_processbar.png
+  artifactKey: Guid(3a2d904ada33ef341a58465d03040123) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Deault/gui-游戏界面/gui-游戏界面/pic_sea_processbar.png using Guid(3a2d904ada33ef341a58465d03040123) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'af9f06f8f0d02afd40912839f8e09a40') in 0.009239 seconds 
+  Import took 0.012693 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000148 seconds.
+  path: Assets/Deault/gui-游戏界面/gui-游戏界面/btn_huiqi.png
+  artifactKey: Guid(fad086baa5cd56540b418f58f931b371) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Deault/gui-游戏界面/gui-游戏界面/btn_huiqi.png using Guid(fad086baa5cd56540b418f58f931b371) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f8b26341658cfdd99502b0c02189f8cc') in 0.007681 seconds 
+  Import took 0.011174 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000152 seconds.
+  path: Assets/Deault/gui-游戏界面/gui-游戏界面/pic_gongchang.png
+  artifactKey: Guid(d5235d09e32e06d43b9497ea7196634d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Deault/gui-游戏界面/gui-游戏界面/pic_gongchang.png using Guid(d5235d09e32e06d43b9497ea7196634d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e5ff13bcaf6e7f0de3b9dcbde5228e36') in 0.007041 seconds 
+  Import took 0.010455 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000148 seconds.
+  path: Assets/Deault/gui-游戏界面/gui-游戏界面/btn_huihe.png
+  artifactKey: Guid(0f95eba27baa26142808ee8fbdee7ca0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Deault/gui-游戏界面/gui-游戏界面/btn_huihe.png using Guid(0f95eba27baa26142808ee8fbdee7ca0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e68e6d89f8f4c59bd7b9447117e75ba6') in 0.012440 seconds 
+  Import took 0.015956 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000125 seconds.
+  path: Assets/Deault/gui-游戏界面/gui-游戏界面/btn_unselectcard_blue.png
+  artifactKey: Guid(5b8b7938b1ad559498d3100b2a9ae208) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Deault/gui-游戏界面/gui-游戏界面/btn_unselectcard_blue.png using Guid(5b8b7938b1ad559498d3100b2a9ae208) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '296549e68032fd7ed10b18755d55665b') in 0.007525 seconds 
+  Import took 0.011215 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000130 seconds.
+  path: Assets/Deault/gui-游戏界面/gui-游戏界面/pic_bg1.png
+  artifactKey: Guid(c104a12aee67a2347a569f53a246d197) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Deault/gui-游戏界面/gui-游戏界面/pic_bg1.png using Guid(c104a12aee67a2347a569f53a246d197) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bd9bde50a445fcc02bbf18746de045f2') in 0.007732 seconds 
+  Import took 0.011177 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000150 seconds.
+  path: Assets/Deault/gui-游戏界面/gui-游戏界面/gui 2.psd
+  artifactKey: Guid(18c6cf0510549b54aabc7db11fa484bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Deault/gui-游戏界面/gui-游戏界面/gui 2.psd using Guid(18c6cf0510549b54aabc7db11fa484bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7754e4f9685295d4776dfd660c42f02c') in 0.041072 seconds 
+  Import took 0.044630 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000207 seconds.
+  path: Assets/Deault/gui-游戏界面/gui-游戏界面/pic_dianchang.png
+  artifactKey: Guid(a85a10e6168e6cd469347d0e91e37c56) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Deault/gui-游戏界面/gui-游戏界面/pic_dianchang.png using Guid(a85a10e6168e6cd469347d0e91e37c56) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e65830c0ccd3ac290026f289c9dcc87c') in 0.008971 seconds 
+  Import took 0.013586 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000127 seconds.
+  path: Assets/Deault/gui-游戏界面/gui-游戏界面/pic_pollution.png
+  artifactKey: Guid(df1a8bfcfaf6fdf4ab6561b96bb76859) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Deault/gui-游戏界面/gui-游戏界面/pic_pollution.png using Guid(df1a8bfcfaf6fdf4ab6561b96bb76859) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '80afeb870dfc2e44e695c528b065677c') in 0.011822 seconds 
+  Import took 0.015356 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000130 seconds.
+  path: Assets/Deault/gui-游戏界面/gui-游戏界面/pic_nongchang.png
+  artifactKey: Guid(c7cf6c10ccfcaf142ae388e8ee4f0ca2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Deault/gui-游戏界面/gui-游戏界面/pic_nongchang.png using Guid(c7cf6c10ccfcaf142ae388e8ee4f0ca2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dfde3ebe3efd9db76ef5d0e953f17210') in 0.007459 seconds 
+  Import took 0.010859 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000165 seconds.
+  path: Assets/Deault/gui-游戏界面/gui-游戏界面/pic_shan_red.png
+  artifactKey: Guid(c830aa78993ff1e4b897b03bb32528e7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Deault/gui-游戏界面/gui-游戏界面/pic_shan_red.png using Guid(c830aa78993ff1e4b897b03bb32528e7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0dec80590570c31c72b865d2d80046fa') in 0.015015 seconds 
+  Import took 0.022038 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000320 seconds.
+  path: Assets/Deault/gui-游戏界面/gui-游戏界面
+  artifactKey: Guid(b2fc06be96ce3834c8ef2eede00c77ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Deault/gui-游戏界面/gui-游戏界面 using Guid(b2fc06be96ce3834c8ef2eede00c77ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cf4980b83a9c5a191743971b06b484b6') in 0.002125 seconds 
+  Import took 0.009725 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000214 seconds.
+  path: Assets/Deault/gui-游戏界面/gui-游戏界面/pic_jinghuata.png
+  artifactKey: Guid(916aac3665fd65b44b0dd5d979a0cf1f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Deault/gui-游戏界面/gui-游戏界面/pic_jinghuata.png using Guid(916aac3665fd65b44b0dd5d979a0cf1f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4ac352b6a53673e3f69434a21065b955') in 0.007158 seconds 
+  Import took 0.011285 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 234.341509 seconds.
+  path: Assets/Deault/gui-游戏界面/gui-游戏界面/pic_money.png
+  artifactKey: Guid(4275f256c98b9ba49930a6d20578d499) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Deault/gui-游戏界面/gui-游戏界面/pic_money.png using Guid(4275f256c98b9ba49930a6d20578d499) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd7f0221ad59eb60d1d85e769aff650c0') in 0.044665 seconds 
+  Import took 0.048878 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 173.703648 seconds.
+  path: Assets/Deault/gui-游戏界面/gui-游戏界面/pic_number.png
+  artifactKey: Guid(1978234585b355a4181f18ea0d49752c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Deault/gui-游戏界面/gui-游戏界面/pic_number.png using Guid(1978234585b355a4181f18ea0d49752c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '387a2d8f2d98e856d1fda60f9c0826ad') in 0.009705 seconds 
+  Import took 0.013776 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 49.290439 seconds.
+  path: Assets/Deault/gui-游戏界面/gui-游戏界面/pic_huihe_bg.png
+  artifactKey: Guid(2f75b3e9c52581e489207fa27cc54b43) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Deault/gui-游戏界面/gui-游戏界面/pic_huihe_bg.png using Guid(2f75b3e9c52581e489207fa27cc54b43) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4f9122120e909b703725045ff10642be') in 0.008832 seconds 
+  Import took 0.012742 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.001084 seconds.
+  path: Assets/Deault/gui-游戏界面/gui-游戏界面/pic_huihe_bg.png
+  artifactKey: Guid(2f75b3e9c52581e489207fa27cc54b43) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Deault/gui-游戏界面/gui-游戏界面/pic_huihe_bg.png using Guid(2f75b3e9c52581e489207fa27cc54b43) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4f9122120e909b703725045ff10642be') in 0.010969 seconds 
+  Import took 0.014668 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 11.326351 seconds.
+  path: Assets/Deault/gui-游戏界面/gui-游戏界面/pic_bg2.png
+  artifactKey: Guid(e1c8095e6331b3345a2cad3f71f229bd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Deault/gui-游戏界面/gui-游戏界面/pic_bg2.png using Guid(e1c8095e6331b3345a2cad3f71f229bd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dd6592d9a3664df656893cfed403b2da') in 0.009842 seconds 
+  Import took 0.014902 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 646.756180 seconds.
+  path: Assets/Deault/gui-游戏界面/gui-游戏界面/pic_pollution.png
+  artifactKey: Guid(df1a8bfcfaf6fdf4ab6561b96bb76859) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Deault/gui-游戏界面/gui-游戏界面/pic_pollution.png using Guid(df1a8bfcfaf6fdf4ab6561b96bb76859) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd641e4e15433f21104fd1dc55d622ea9') in 0.010077 seconds 
+  Import took 0.014272 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.001204 seconds.
+  path: Assets/Deault/gui-游戏界面/gui-游戏界面/pic_pollution.png
+  artifactKey: Guid(df1a8bfcfaf6fdf4ab6561b96bb76859) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Deault/gui-游戏界面/gui-游戏界面/pic_pollution.png using Guid(df1a8bfcfaf6fdf4ab6561b96bb76859) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd641e4e15433f21104fd1dc55d622ea9') in 0.007183 seconds 
+  Import took 0.011451 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 326.227257 seconds.
+  path: Assets/Deault/gui-游戏界面/gui-游戏界面/pic_huihe_bg.png
+  artifactKey: Guid(2f75b3e9c52581e489207fa27cc54b43) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Deault/gui-游戏界面/gui-游戏界面/pic_huihe_bg.png using Guid(2f75b3e9c52581e489207fa27cc54b43) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8169d6d15836bddb2db8d536b0680daa') in 0.016061 seconds 
+  Import took 0.020359 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 92.871614 seconds.
+  path: Assets/Deault/gui-游戏界面/gui-游戏界面/pic_huihe_bg.png
+  artifactKey: Guid(2f75b3e9c52581e489207fa27cc54b43) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Deault/gui-游戏界面/gui-游戏界面/pic_huihe_bg.png using Guid(2f75b3e9c52581e489207fa27cc54b43) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '21118bbe29931c5c3a4a23e0572160b2') in 0.007459 seconds 
+  Import took 0.012751 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 310.788383 seconds.
+  path: Assets/Deault/gui-游戏界面/gui-游戏界面/pic_bg2.png
+  artifactKey: Guid(e1c8095e6331b3345a2cad3f71f229bd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Deault/gui-游戏界面/gui-游戏界面/pic_bg2.png using Guid(e1c8095e6331b3345a2cad3f71f229bd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0b14fc74909d443fed30abb5bf761cbf') in 0.007846 seconds 
+  Import took 0.012603 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 136.952327 seconds.
+  path: Assets/Main/Scripts/Art
+  artifactKey: Guid(12afc5ee3e4774c6399839de15a35dc3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Main/Scripts/Art using Guid(12afc5ee3e4774c6399839de15a35dc3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5ecc7310d38b438f8c73151142ec5259') in 0.005000 seconds 
+  Import took 0.008944 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 506.644375 seconds.
+  path: Assets/Main/gui-游戏界面/pic_sea_processbar.png
+  artifactKey: Guid(3a2d904ada33ef341a58465d03040123) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Main/gui-游戏界面/pic_sea_processbar.png using Guid(3a2d904ada33ef341a58465d03040123) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9f009d6de5e5b0286a9cabdb175596dd') in 0.012408 seconds 
+  Import took 0.016864 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 36.648758 seconds.
+  path: Assets/New Material.mat
+  artifactKey: Guid(531e217d1b552dc40881de7de4903908) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/New Material.mat using Guid(531e217d1b552dc40881de7de4903908) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1b95e69fee80cac5d8586bf08fbc55c7') in 0.135465 seconds 
+  Import took 0.139418 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 144.382090 seconds.
+  path: Assets/Main/Scripts/Art/ChessBoard.cs
+  artifactKey: Guid(818c0081e367d41f88fce33281d8b6aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Main/Scripts/Art/ChessBoard.cs using Guid(818c0081e367d41f88fce33281d8b6aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '60d720f5ea9add9eb3915d6dc858e724') in 0.008300 seconds 
+  Import took 0.012284 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 213.836435 seconds.
+  path: Assets/Editor
+  artifactKey: Guid(879d95705a1704963aff9eaabea52b5c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Editor using Guid(879d95705a1704963aff9eaabea52b5c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '11bb72f01de32e467e970c2e5733070d') in 0.005193 seconds 
+  Import took 0.009476 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 76.482094 seconds.
+  path: Assets/Main/gui-游戏界面/pic_shan_red.png
+  artifactKey: Guid(c830aa78993ff1e4b897b03bb32528e7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Main/gui-游戏界面/pic_shan_red.png using Guid(c830aa78993ff1e4b897b03bb32528e7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '16c4e6da76916f41aa9ffbe1c160fae4') in 0.014467 seconds 
+  Import took 0.019214 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000165 seconds.
+  path: Assets/Main/gui-游戏界面/pic_shan_white.png
+  artifactKey: Guid(8c1a4cafb3b774b4381189a21c3cc4ff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Main/gui-游戏界面/pic_shan_white.png using Guid(8c1a4cafb3b774b4381189a21c3cc4ff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'da3555a4781798dfebc0e9ee8748bc62') in 0.018210 seconds 
+  Import took 0.021918 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000161 seconds.
+  path: Assets/Main/gui-游戏界面/pic_shan_red.png
+  artifactKey: Guid(c830aa78993ff1e4b897b03bb32528e7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Main/gui-游戏界面/pic_shan_red.png using Guid(c830aa78993ff1e4b897b03bb32528e7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '16c4e6da76916f41aa9ffbe1c160fae4') in 0.019620 seconds 
+  Import took 0.023238 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 847.850715 seconds.
+  path: Assets/Main/gui-游戏界面/btn_unselectcard_yellow.png
+  artifactKey: Guid(ff3e80310a43bb244991ddb69788bdc0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Main/gui-游戏界面/btn_unselectcard_yellow.png using Guid(ff3e80310a43bb244991ddb69788bdc0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '26e0a152f80b4a1dab1f9878a6cf3a8e') in 0.014436 seconds 
+  Import took 0.019473 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 107.251712 seconds.
+  path: Assets/Main/gui-游戏界面/pic_jinghuata.png
+  artifactKey: Guid(916aac3665fd65b44b0dd5d979a0cf1f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Main/gui-游戏界面/pic_jinghuata.png using Guid(916aac3665fd65b44b0dd5d979a0cf1f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c17857b67e8f3d232c882df8e7a74c26') in 0.011656 seconds 
+  Import took 0.016056 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 15.217156 seconds.
+  path: Assets/Main/gui-游戏界面/pic_dianchang.png
+  artifactKey: Guid(a85a10e6168e6cd469347d0e91e37c56) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Main/gui-游戏界面/pic_dianchang.png using Guid(a85a10e6168e6cd469347d0e91e37c56) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5ceea617741c5b31b717ea281791ea01') in 0.010022 seconds 
+  Import took 0.013999 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000216 seconds.
+  path: Assets/Main/gui-游戏界面/pic_gongchang.png
+  artifactKey: Guid(d5235d09e32e06d43b9497ea7196634d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Main/gui-游戏界面/pic_gongchang.png using Guid(d5235d09e32e06d43b9497ea7196634d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e5905ca506c1e8da175e2342864d14a2') in 0.015477 seconds 
+  Import took 0.019301 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000145 seconds.
+  path: Assets/Main/gui-游戏界面/pic_nongchang.png
+  artifactKey: Guid(c7cf6c10ccfcaf142ae388e8ee4f0ca2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Main/gui-游戏界面/pic_nongchang.png using Guid(c7cf6c10ccfcaf142ae388e8ee4f0ca2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b57b90bfebb125a4dc930ba1fa2ed20c') in 0.011294 seconds 
+  Import took 0.015025 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 315.374246 seconds.
+  path: Assets/Main/gui-游戏界面/btn_selectedcard_yellow.png
+  artifactKey: Guid(1a81f25d704dddb41bb606f3476b2fd6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Main/gui-游戏界面/btn_selectedcard_yellow.png using Guid(1a81f25d704dddb41bb606f3476b2fd6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a492aa0d213d81ec9e39d916c7492726') in 0.012362 seconds 
+  Import took 0.017651 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.004568 seconds.
+  path: Assets/Main/gui-游戏界面/btn_selectedcard_yellow.png
+  artifactKey: Guid(1a81f25d704dddb41bb606f3476b2fd6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Main/gui-游戏界面/btn_selectedcard_yellow.png using Guid(1a81f25d704dddb41bb606f3476b2fd6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a492aa0d213d81ec9e39d916c7492726') in 0.016748 seconds 
+  Import took 0.020572 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.873577 seconds.
+  path: Assets/Main/gui-游戏界面/btn_selectedcard_blue.png
+  artifactKey: Guid(39e250a8aa721c248be3729057c4f724) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Main/gui-游戏界面/btn_selectedcard_blue.png using Guid(39e250a8aa721c248be3729057c4f724) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '536b8226aaaec994011a04892fd4f822') in 0.010340 seconds 
+  Import took 0.014167 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.002833 seconds.
+  path: Assets/Main/gui-游戏界面/btn_selectedcard_blue.png
+  artifactKey: Guid(39e250a8aa721c248be3729057c4f724) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Main/gui-游戏界面/btn_selectedcard_blue.png using Guid(39e250a8aa721c248be3729057c4f724) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '536b8226aaaec994011a04892fd4f822') in 0.010083 seconds 
+  Import took 0.014636 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 21.794246 seconds.
+  path: Assets/Main/gui-游戏界面/btn_unselectcard_blue.png
+  artifactKey: Guid(5b8b7938b1ad559498d3100b2a9ae208) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Main/gui-游戏界面/btn_unselectcard_blue.png using Guid(5b8b7938b1ad559498d3100b2a9ae208) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f4f008472a4472197a86ab8e47bcf275') in 0.010384 seconds 
+  Import took 0.014429 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 88.395297 seconds.
+  path: Assets/Main/gui-游戏界面/pic_xinnengyuan.png
+  artifactKey: Guid(fa80911bbe036e94ca4364e298335f87) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Main/gui-游戏界面/pic_xinnengyuan.png using Guid(fa80911bbe036e94ca4364e298335f87) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dea26deeb708c92f9e295f54293a12c2') in 0.010758 seconds 
+  Import took 0.014540 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1352.935637 seconds.
+  path: Assets/Main/gui-游戏界面/btn_huihe.png
+  artifactKey: Guid(0f95eba27baa26142808ee8fbdee7ca0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Main/gui-游戏界面/btn_huihe.png using Guid(0f95eba27baa26142808ee8fbdee7ca0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e3ab3806e01052315e94b7c2147dc22e') in 0.011513 seconds 
+  Import took 0.016450 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000179 seconds.
+  path: Assets/Main/gui-游戏界面/btn_huiqi.png
+  artifactKey: Guid(fad086baa5cd56540b418f58f931b371) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Main/gui-游戏界面/btn_huiqi.png using Guid(fad086baa5cd56540b418f58f931b371) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0ddec3ab07625e3dd8a87ecd35143fbf') in 0.012694 seconds 
+  Import took 0.017030 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 623.711762 seconds.
+  path: Assets/Main/model
+  artifactKey: Guid(97603f5d820ca48f08421a30f38f943f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Main/model using Guid(97603f5d820ca48f08421a30f38f943f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '599ea58fc18651f51f481872b7c40318') in 0.005344 seconds 
+  Import took 0.009624 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.043839 seconds.
+  path: Assets/Main/model/purify.obj
+  artifactKey: Guid(43b163b9fa223478fa2f80636789db66) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Main/model/purify.obj using Guid(43b163b9fa223478fa2f80636789db66) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '47a5bbd8a0223b33f9fc86a90931d38a') in 0.072455 seconds 
+  Import took 0.076306 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000145 seconds.
+  path: Assets/Main/model/临时模型占位.obj
+  artifactKey: Guid(00916d55acc464467bd8dd07f3fe327e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Main/model/临时模型占位.obj using Guid(00916d55acc464467bd8dd07f3fe327e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '122bd9b3425fa0e2582727d2ac989fc3') in 0.033955 seconds 
+  Import took 0.037296 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 10.079943 seconds.
+  path: Assets/Main/Scripts/GUI
+  artifactKey: Guid(2a44b43d4444b462ea4d97f9f371def7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Main/Scripts/GUI using Guid(2a44b43d4444b462ea4d97f9f371def7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cb331290e2c5818d7856caa01038db77') in 0.004969 seconds 
+  Import took 0.008731 seconds .
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.000754 seconds.
+Registered in 0.002110 seconds.
 Begin MonoManager ReloadAssembly
-Native extension for OSXStandalone target not found
-Refreshing native plugins compatible for Editor in 0.46 ms, found 1 plugins.
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.53 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.908 seconds
+- Completed reload, in  0.887 seconds
 Platform modules already initialized, skipping
 Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 0.66 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 0.56 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2360 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 180.2 MB.
-System memory in use after: 177.8 MB.
+Unloading 2587 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 124.3 MB.
+System memory in use after: 124.5 MB.
 
-Unloading 40 unused Assets to reduce memory usage. Loaded Objects now: 2846.
-Total: 4.003203 ms (FindLiveObjects: 0.349047 ms CreateObjectMapping: 0.185426 ms MarkObjects: 1.870935 ms  DeleteObjects: 1.595920 ms)
+Unloading 31 unused Assets to reduce memory usage. Loaded Objects now: 3252.
+Total: 2.117300 ms (FindLiveObjects: 0.259500 ms CreateObjectMapping: 0.120900 ms MarkObjects: 1.713200 ms  DeleteObjects: 0.022500 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 36.120172 seconds.
+  path: Assets/Deault/Scripts
+  artifactKey: Guid(02a3527b6b33a924e8ec66aa805ea717) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Deault/Scripts using Guid(02a3527b6b33a924e8ec66aa805ea717) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3d22bec3b2937c29cd085e1506c06094') in 0.007317 seconds 
+  Import took 0.011059 seconds .
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.000954 seconds.
+Registered in 0.002199 seconds.
 Begin MonoManager ReloadAssembly
-Native extension for OSXStandalone target not found
-Refreshing native plugins compatible for Editor in 0.37 ms, found 1 plugins.
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.49 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.957 seconds
+- Completed reload, in  0.784 seconds
 Platform modules already initialized, skipping
 Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 0.38 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 0.47 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2360 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 180.5 MB.
-System memory in use after: 178.1 MB.
+Unloading 2587 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 124.3 MB.
+System memory in use after: 124.5 MB.
 
-Unloading 40 unused Assets to reduce memory usage. Loaded Objects now: 2849.
-Total: 3.794904 ms (FindLiveObjects: 0.259071 ms CreateObjectMapping: 0.114037 ms MarkObjects: 1.764255 ms  DeleteObjects: 1.656434 ms)
+Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 3255.
+Total: 2.098100 ms (FindLiveObjects: 0.266000 ms CreateObjectMapping: 0.119400 ms MarkObjects: 1.694600 ms  DeleteObjects: 0.017300 ms)
 
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.000793 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for OSXStandalone target not found
-Refreshing native plugins compatible for Editor in 0.44 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.967 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 0.39 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2360 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 180.7 MB.
-System memory in use after: 178.4 MB.
-
-Unloading 40 unused Assets to reduce memory usage. Loaded Objects now: 2852.
-Total: 3.847338 ms (FindLiveObjects: 0.328647 ms CreateObjectMapping: 0.116169 ms MarkObjects: 1.759887 ms  DeleteObjects: 1.641247 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001160 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for OSXStandalone target not found
-Refreshing native plugins compatible for Editor in 0.39 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.956 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 0.39 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2360 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 181.1 MB.
-System memory in use after: 178.8 MB.
-
-Unloading 40 unused Assets to reduce memory usage. Loaded Objects now: 2855.
-Total: 5.787759 ms (FindLiveObjects: 0.512815 ms CreateObjectMapping: 0.255398 ms MarkObjects: 2.814931 ms  DeleteObjects: 2.202118 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.000810 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for OSXStandalone target not found
-Refreshing native plugins compatible for Editor in 0.38 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.934 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 0.36 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2360 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 181.3 MB.
-System memory in use after: 178.9 MB.
-
-Unloading 40 unused Assets to reduce memory usage. Loaded Objects now: 2858.
-Total: 3.813249 ms (FindLiveObjects: 0.272624 ms CreateObjectMapping: 0.105111 ms MarkObjects: 1.739093 ms  DeleteObjects: 1.695024 ms)
+Received Import Request.
+  Time since last request: 3.420433 seconds.
+  path: Assets/Deault/Settings
+  artifactKey: Guid(0735c275001a2c84dafdb30deced5d8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Deault/Settings using Guid(0735c275001a2c84dafdb30deced5d8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '93acb47a41d734d0e1a9166c2e42237b') in 0.007535 seconds 
+  Import took 0.011168 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 2380.383284 seconds.
-  path: Assets/Main/Scripts/Logic/Room.cs
-  artifactKey: Guid(7796769c474d2463595e58e8038d8ee5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Main/Scripts/Logic/Room.cs using Guid(7796769c474d2463595e58e8038d8ee5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3da89110adc71684637753d08bf9119e') in 0.005015 seconds
-  Import took 0.009899 seconds .
+  Time since last request: 1.174989 seconds.
+  path: Assets/Deault/Materials
+  artifactKey: Guid(d0234ba368eeec9418390da711bfdad0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Deault/Materials using Guid(d0234ba368eeec9418390da711bfdad0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fa67f7aafba014bdcc74449d8eba51d0') in 0.005424 seconds 
+  Import took 0.009324 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 9.681499 seconds.
-  path: Assets/Main/Scripts/Proxy/AllProxyClasss.cs
-  artifactKey: Guid(03a7a507b3c3849b0aacb2ae7cee8d4e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Main/Scripts/Proxy/AllProxyClasss.cs using Guid(03a7a507b3c3849b0aacb2ae7cee8d4e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '86b77a75b226e80e43aa4c37ece825e4') in 0.001816 seconds
-  Import took 0.006422 seconds .
+  Time since last request: 17.614929 seconds.
+  path: Assets/UIdemo.unity
+  artifactKey: Guid(6ee719310ac846f41a24ce809b88d08d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UIdemo.unity using Guid(6ee719310ac846f41a24ce809b88d08d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f26637b753aa749880f7b83a6d4182a0') in 0.023619 seconds 
+  Import took 0.027528 seconds .
 
-========================================================================
-Received Import Request.
-  Time since last request: 0.001071 seconds.
-  path: Assets/Main/Scripts/Proxy/AllProxyClasss.cs
-  artifactKey: Guid(03a7a507b3c3849b0aacb2ae7cee8d4e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Main/Scripts/Proxy/AllProxyClasss.cs using Guid(03a7a507b3c3849b0aacb2ae7cee8d4e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '86b77a75b226e80e43aa4c37ece825e4') in 0.002246 seconds
-  Import took 0.006947 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.000861 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for OSXStandalone target not found
-Refreshing native plugins compatible for Editor in 0.38 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.923 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 0.45 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2360 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 181.6 MB.
-System memory in use after: 179.3 MB.
-
-Unloading 40 unused Assets to reduce memory usage. Loaded Objects now: 2861.
-Total: 4.227825 ms (FindLiveObjects: 0.366163 ms CreateObjectMapping: 0.217432 ms MarkObjects: 1.905023 ms  DeleteObjects: 1.735995 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 206.189241 seconds.
-  path: Assets/Main/Scripts/Logic/Chessbass.cs
-  artifactKey: Guid(d844e6e63f730469fbeb5d63f22718b8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Main/Scripts/Logic/Chessbass.cs using Guid(d844e6e63f730469fbeb5d63f22718b8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '84eeab08a9f5586419deefb6a94443a4') in 0.005329 seconds
-  Import took 0.010634 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001287 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for OSXStandalone target not found
-Refreshing native plugins compatible for Editor in 0.37 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.900 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 0.42 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2360 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 181.9 MB.
-System memory in use after: 179.6 MB.
-
-Unloading 40 unused Assets to reduce memory usage. Loaded Objects now: 2864.
-Total: 5.236538 ms (FindLiveObjects: 0.388025 ms CreateObjectMapping: 0.177192 ms MarkObjects: 2.464424 ms  DeleteObjects: 2.204706 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 1035.255845 seconds.
-  path: Assets/Main/Scripts/Logic/Room.cs
-  artifactKey: Guid(7796769c474d2463595e58e8038d8ee5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Main/Scripts/Logic/Room.cs using Guid(7796769c474d2463595e58e8038d8ee5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c4563bf0bfd4d290688ea2112647a0b7') in 0.005266 seconds
-  Import took 0.012543 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.000749 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for OSXStandalone target not found
-Refreshing native plugins compatible for Editor in 0.37 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.876 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 0.39 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2360 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 182.2 MB.
-System memory in use after: 179.9 MB.
-
-Unloading 40 unused Assets to reduce memory usage. Loaded Objects now: 2867.
-Total: 4.152403 ms (FindLiveObjects: 0.315783 ms CreateObjectMapping: 0.142956 ms MarkObjects: 1.900796 ms  DeleteObjects: 1.791388 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.000836 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for OSXStandalone target not found
-Refreshing native plugins compatible for Editor in 0.40 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.986 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 0.41 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2360 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 182.5 MB.
-System memory in use after: 180.2 MB.
-
-Unloading 40 unused Assets to reduce memory usage. Loaded Objects now: 2870.
-Total: 6.352633 ms (FindLiveObjects: 0.490076 ms CreateObjectMapping: 0.206167 ms MarkObjects: 3.005431 ms  DeleteObjects: 2.644825 ms)
-
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file

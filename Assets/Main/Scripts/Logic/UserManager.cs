@@ -19,9 +19,9 @@ public class GameInfo
 {
     public float TotalPollution = 100;
     public int TotalRound = 15;
-    public float EachRoundTime = 50; // secs
+    public float EachRoundTime = 50; 
     public float InitGold = 100;
-    public List<FactoryType> FactoryTypes; //这个部分assing给玩家,因为不需要发牌了
+    public List<FactoryType> FactoryTypes; 
     public int FirstId = 0;
     public int Id = 0;
 }
@@ -36,7 +36,8 @@ public class UserManager : MonoBehaviour
     public ProxyManager ProxyManager;
     public UserInfo MyUserInfo;
     public UserInfo OpUserInfo;
-    
+
+    public bool isMaster = false;
     private void Start()
     {
         GameInfo = new GameInfo();
@@ -137,7 +138,7 @@ public class UserManager : MonoBehaviour
                 Id = 1,
                 FirstId = GameInitInfo.FirstId,
             }));
-        
+        isMaster = true;
         // ui跳转
         loadSceneName = "Room";
     }
@@ -161,7 +162,7 @@ public class UserManager : MonoBehaviour
         GameInfo.Id = gameInfo.Id;
         GameInfo.FirstId = GameInfo.FirstId;
         Debug.Log("当前为从机，跳转到下一界面");
-        
+        isMaster = false;
         // ui跳转
         loadSceneName = "Room";
     }

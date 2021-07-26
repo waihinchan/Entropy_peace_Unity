@@ -4,10 +4,9 @@ using UnityEngine;
 
 public class GameInput
 {
-    public void HeartBeats(string data, ProxyManager manager)
+    public void HeartBeats(object data, ProxyManager manager)
     {
-        var backReq = JsonUtility.ToJson(new Empty());
-        manager.Call(FuncCode.HeartBeatsBack, backReq);
+        manager.Call(FuncCode.HeartBeatsBack, new HeartBeatsBack());
     }
 
     public void HeartBeatsBack(string data, ProxyManager manager)

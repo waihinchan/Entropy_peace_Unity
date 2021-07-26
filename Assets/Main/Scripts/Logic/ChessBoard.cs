@@ -26,20 +26,19 @@ public class ChessBoard : MonoBehaviour
         Vector3 singlesize = new Vector3(x,y,z);
         int rows = (int)Mathf.Floor(Mathf.Sqrt(totalChessBass));
         int cols = rows;
-        int count = 0;
         for (int i = 0; i < rows; i++)
         {
             for (int j = 0; j < cols; j++)
             {
-                GameObject singlechess = Instantiate(chessBass, new Vector3(i*singlesize.x + 0.1f * i ,0,j*singlesize.z + j * 0.1f) + offset.position, Quaternion.identity);
-                count++;
+                GameObject singleChess = Instantiate(chessBass, new Vector3(i*singlesize.x + 0.1f * i ,0,j*singlesize.z + j * 0.1f) + offset.position, Quaternion.identity);
+                var chess = singleChess.GetComponent<Chess>();
+                chess.InitChess(null, (i,j), null);
             }
         }
     }
     
     void Start()
     {
-        // userManager = GameObject.Find("Manager").GetComponent<UserManager>();
         InitChessBoard();
         PlaceChessBases(); //这里是游戏开始才初始化棋盘还是说直接进入这个场景就可以初始化棋盘还不确定
     }
@@ -59,19 +58,22 @@ public class ChessBoard : MonoBehaviour
     
     public Chess BuildChess(FactoryType factoryType, ValueTuple<int,int> index, Player owner)
     {
-        var newChess = new Chess(factoryType, index, owner);
+        float x = chessBass.GetComponent<MeshFilter>().sharedMesh.bounds.size.x * chessBass.transform.lossyScale.x;
+        float y = chessBass.GetComponent<MeshFilter>().sharedMesh.bounds.size.y * chessBass.transform.lossyScale.y;
+        float z = chessBass.GetComponent<MeshFilter>().sharedMesh.bounds.size.z * chessBass.transform.lossyScale.z;
+        Vector3 singlesize = new Vector3(x,y,z);
+
+        var  newChessObj = Instantiate(factoryType.FactoryOutlook, new Vector3(index.Item1*singlesize.x + 0.1f * index.Item1 ,
+            0,index.Item2*singlesize.z + index.Item2 * 0.1f) + offset.position, Quaternion.identity);
+
+        var newChess = newChessObj.GetComponent<Chess>();
+        newChess.InitChess(factoryType, index, owner);
         ChessMatrix[index.Item1][index.Item2] = newChess;
-        owner.AddChess(newChess);        
+        
+        owner.AddChess(newChess); 
         return newChess;
     }
-    
-    // 需要写一个位置的映射
-    // 显示棋子的位置
-    public void ShowChess(Chess chess, Tuple<int,int> index)
-    {
-        GameObject newchess = Instantiate(chess.FactoryType.FactoryOutlook,  this.transform.position + new Vector3(0,0.5f,0), Quaternion.identity);
-    }
-    
+
     // 消隐棋子的位置
     public void UnShowChess()
     {

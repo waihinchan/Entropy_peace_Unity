@@ -15,13 +15,6 @@ public class ChessBoard : MonoBehaviour
 
     private UserManager userManager;
     
-    void Start()
-    {
-        // userManager = GameObject.Find("Manager").GetComponent<UserManager>();
-        InitChessBoard();
-        PlaceChessBases(); //这里是游戏开始才初始化棋盘还是说直接进入这个场景就可以初始化棋盘还不确定
-    }
-
     void PlaceChessBases(){
 
         if(offset==null){
@@ -44,6 +37,13 @@ public class ChessBoard : MonoBehaviour
         }
     }
     
+    void Start()
+    {
+        // userManager = GameObject.Find("Manager").GetComponent<UserManager>();
+        InitChessBoard();
+        PlaceChessBases(); //这里是游戏开始才初始化棋盘还是说直接进入这个场景就可以初始化棋盘还不确定
+    }
+
     void InitChessBoard()
     {
         ChessMatrix = new Chess[ChessWidth][];

@@ -31,7 +31,7 @@ public class Game : MonoBehaviour
     public void Start()
     {
         _userManager = GameObject.Find("Manager").GetComponent<UserManager>();
-        _gameInfo = _gameInfo;
+        _gameInfo = _userManager.GameInfo;
         GameContext = new GameContext(_gameInfo.Id == _gameInfo.FirstId);
     }
 }

@@ -11,6 +11,10 @@ public class Player
     public Player(string name)
     {
         this.name = name;
+        EachRoundInfo[ConstantString.CurrentGeneratePollution]= 0; 
+        EachRoundInfo[ConstantString.CurrentGenerateGold] = 0;
+        EachRoundInfo[ConstantString.CurrentOwnGold] = 0; 
+
     }
 
     public void AddChess(Chess chess)

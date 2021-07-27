@@ -58,7 +58,7 @@ public class GameManager : MonoBehaviour
         _userManager = GameObject.Find("Manager").GetComponent<UserManager>();
         
         _gameInfo = _userManager.GameInfo;
-
+        
         foreach (var factoryType in _gameInfo.FactoryTypes)
         {
             _factoryTypes.Add(factoryType.name, factoryType);
@@ -67,7 +67,9 @@ public class GameManager : MonoBehaviour
         _game = GetComponent<Game>();
         _userManager = GameObject.Find("Manager").GetComponent<UserManager>();
         MyPlayer = new Player(_userManager.MyUserInfo.UserName);
+        MyPlayer.EachRoundInfo[ConstantString.CurrentOwnGold] = _gameInfo.InitGold;
         OpPlayer = new Player(_userManager.OpUserInfo.UserName);
+        OpPlayer.EachRoundInfo[ConstantString.CurrentOwnGold] = _gameInfo.InitGold;
 
         _camera = GameObject.Find("Main Camera").GetComponent<Camera>();
         // 如果不是主机

@@ -102,10 +102,10 @@ public class UserManager : MonoBehaviour
         ProxyManager.StartClient(host);
         Debug.Log("房间加入中");
         ProxyManager.Call(FuncCode.GiveUserInfo, 
-            JsonUtility.ToJson(new GiveUserInfo()
+            new GiveUserInfo()
         {
             UserName = LocalUserInfo.UserName,
-        }));
+        });
     }
 
     // public bool GameStart()
@@ -127,7 +127,7 @@ public class UserManager : MonoBehaviour
         }
         // 此处可拓展
         ProxyManager.Call(FuncCode.GiveGameInfo, 
-            JsonUtility.ToJson(new GiveGameInfo()
+            new GiveGameInfo()
             {
                 FactoryTypesName = factoryTypes,
                 MasterUserName = LocalUserInfo.UserName,
@@ -137,7 +137,7 @@ public class UserManager : MonoBehaviour
                 EachRoundTime = GameInitInfo.EachRoundTime,
                 Id = 1,
                 FirstId = GameInitInfo.FirstId,
-            }));
+            });
         isMaster = true;
         // ui跳转
         loadSceneName = "Room";

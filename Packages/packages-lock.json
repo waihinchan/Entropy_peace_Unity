@@ -133,6 +133,12 @@
         "com.unity.modules.imgui": "1.0.0"
       }
     },
+    "jp.keijiro.noiseshader": {
+      "version": "file:D:/个人项目/tool/NoiseShader/Packages/jp.keijiro.noiseshader",
+      "depth": 0,
+      "source": "local",
+      "dependencies": {}
+    },
     "com.unity.modules.ai": {
       "version": "1.0.0",
       "depth": 0,

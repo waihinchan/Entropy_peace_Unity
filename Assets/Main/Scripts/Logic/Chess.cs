@@ -10,7 +10,6 @@ public class Chess: MonoBehaviour
 
     public void Start()
     {
-        throw new NotImplementedException();
     }
 
     public void InitChess(FactoryType factoryType, ValueTuple<int,int> index, Player owner){

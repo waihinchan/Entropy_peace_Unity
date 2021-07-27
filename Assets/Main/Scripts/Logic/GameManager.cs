@@ -78,6 +78,7 @@ public class GameManager : MonoBehaviour
             // 将相机逆向
             _camera.transform.position = new Vector3(0, 6, 5);
             _camera.transform.Rotate(45, 180, 0);
+            _camera.transform.Rotate(new Vector3(45, 180, 0));
         }
     }
     

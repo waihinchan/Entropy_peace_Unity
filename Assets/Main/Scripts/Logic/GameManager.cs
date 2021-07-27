@@ -11,7 +11,6 @@ public class GameManager : MonoBehaviour
     private Player OpPlayer;
     private UserManager _userManager;
     private GameInfo _gameInfo;
-    private MainPlayer _mainPlayer;
     private Game _game;
     private Camera _camera;
     
@@ -67,7 +66,6 @@ public class GameManager : MonoBehaviour
         
         _game = GetComponent<Game>();
         _userManager = GameObject.Find("Manager").GetComponent<UserManager>();
-        _mainPlayer = GameObject.Find("MainPlayer").GetComponent<MainPlayer>();
         MyPlayer = new Player(_userManager.MyUserInfo.UserName);
         OpPlayer = new Player(_userManager.OpUserInfo.UserName);
 
@@ -113,15 +111,18 @@ public class GameManager : MonoBehaviour
     // 当结束回合时调用这个函数
     public void StopMainPlayerTurn()
     {
-        var builderList = _mainPlayer.ChoiceBuilderList;
+        var builderList = ChoiceBuilderList;
         List<ValueTuple<FactoryType, ValueTuple<int,int>>> turnChessList = new List<(FactoryType, (int, int))>();
         foreach (var keyValue in builderList)
         {
             turnChessList.Append((keyValue.Value, keyValue.Key));
         }
         MySettle(turnChessList);
+        builderList.Clear();
     }
     
+    public Dictionary<ValueTuple<int, int>, FactoryType> ChoiceBuilderList = new Dictionary<(int, int), FactoryType>();
+
     void Update()
     {
         if (gameContext == null)
@@ -172,11 +173,11 @@ public class GameManager : MonoBehaviour
                     else
                     {
                         MyPlayer.EachRoundInfo[ConstantString.CurrentOwnGold] -= _selectFactoryType.CostGold;
-                        _mainPlayer.ChoiceBuilderList.Add(chess.Index, _selectFactoryType);
+                        ChoiceBuilderList.Add(chess.Index, _selectFactoryType);
                     }
                 }
             }
-
+            Destroy(_tmpFactory);
             _selectFactoryType = null;
         }
     }

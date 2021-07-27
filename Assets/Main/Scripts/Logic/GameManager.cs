@@ -56,7 +56,8 @@ public class GameManager : MonoBehaviour
         pollutionText = GameObject.Find("GUI/TopStatus/污染信息BG/每回合生产金币信息").GetComponent<Text>();
         everyPollytionText = GameObject.Find("GUI/TopStatus/污染信息BG/当前拥有总金币").GetComponent<Text>();
         turnText = GameObject.Find("GUI/BottomStatus/当前回合 (1)").GetComponent<Text>();
-
+        _userManager = GameObject.Find("Manager").GetComponent<UserManager>();
+        
         _gameInfo = _userManager.GameInfo;
 
         foreach (var factoryType in _gameInfo.FactoryTypes)

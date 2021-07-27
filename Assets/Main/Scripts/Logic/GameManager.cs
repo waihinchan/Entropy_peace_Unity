@@ -2,13 +2,14 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {   
     public ChessBoard ChessBoard; //chessboard去获得player的信息,然后生成棋子在上面.
     private Player MyPlayer;
     private Player OpPlayer;
-    private UserManager UserManager;
+    private UserManager _userManager;
     private GameInfo _gameInfo;
     private MainPlayer _mainPlayer;
     private Game _game;
@@ -41,9 +42,22 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    private Text timeText;
+    private Text moneyText;
+    private Text everyMoneyText;
+    private Text pollutionText;
+    private Text everyPollytionText;
+    private Text turnText;
     public void Start()
     {
-        _gameInfo = UserManager.GameInfo;
+        timeText = GameObject.Find("GUI/BottomStatus/CONTROLPANEL/我的名字").GetComponent<Text>();
+        moneyText = GameObject.Find("GUI/TopStatus/金币信息BG/每回合生产金币信息").GetComponent<Text>();
+        everyMoneyText = GameObject.Find("GUI/TopStatus/金币信息BG/当前拥有总金币").GetComponent<Text>();
+        pollutionText = GameObject.Find("GUI/TopStatus/污染信息BG/每回合生产金币信息").GetComponent<Text>();
+        everyPollytionText = GameObject.Find("GUI/TopStatus/污染信息BG/当前拥有总金币").GetComponent<Text>();
+        turnText = GameObject.Find("GUI/BottomStatus/当前回合 (1)").GetComponent<Text>();
+
+        _gameInfo = _userManager.GameInfo;
 
         foreach (var factoryType in _gameInfo.FactoryTypes)
         {
@@ -51,12 +65,19 @@ public class GameManager : MonoBehaviour
         }
         
         _game = GetComponent<Game>();
-        UserManager = GameObject.Find("Manager").GetComponent<UserManager>();
+        _userManager = GameObject.Find("Manager").GetComponent<UserManager>();
         _mainPlayer = GameObject.Find("MainPlayer").GetComponent<MainPlayer>();
-        MyPlayer = new Player(UserManager.MyUserInfo.UserName);
-        OpPlayer = new Player(UserManager.OpUserInfo.UserName);
+        MyPlayer = new Player(_userManager.MyUserInfo.UserName);
+        OpPlayer = new Player(_userManager.OpUserInfo.UserName);
 
         _camera = GameObject.Find("Main Camera").GetComponent<Camera>();
+        // 如果不是主机
+        if (!_userManager.isMaster)
+        {
+            // 将相机逆向
+            _camera.transform.position = new Vector3(0, 6, 5);
+            _camera.transform.Rotate(45, 180, 0);
+        }
     }
     
     public void GameOver()
@@ -66,6 +87,7 @@ public class GameManager : MonoBehaviour
     }
 
     private FactoryType _selectFactoryType;
+    private GameObject _tmpFactory;
     public void SelectBuilder(string builderName)
     {
         var ok = _factoryTypes.TryGetValue(builderName, out _selectFactoryType);
@@ -81,6 +103,10 @@ public class GameManager : MonoBehaviour
             _selectFactoryType = null;
             return;
         }
+        Vector3 mousePosition = new Vector3(Input.mousePosition.x, Input.mousePosition.y, 0);
+        Vector3 objectPosition = Camera.main.ScreenToWorldPoint(mousePosition);
+
+        _tmpFactory = Instantiate(_selectFactoryType.FactoryOutlook, objectPosition, Quaternion.identity);
     }
 
     // 当结束回合时调用这个函数
@@ -108,13 +134,26 @@ public class GameManager : MonoBehaviour
             return;
         }
         
+        timeText.text = "我方回合 ： " + (_gameInfo.EachRoundTime - gameContext.TurnTime) + "s";
+        moneyText.text = "总 " + MyPlayer.EachRoundInfo[ConstantString.CurrentOwnGold];
+        everyMoneyText.text = "+ " + MyPlayer.EachRoundInfo[ConstantString.CurrentGenerateGold] + " / 回合 ";
+        pollutionText.text = "总 " + gameContext.Pollution;
+        everyPollytionText.text = "+ " + MyPlayer.EachRoundInfo[ConstantString.CurrentGeneratePollution] + " / 回合 ";
+        turnText.text = gameContext.TurnCount+"/"+_gameInfo.TotalRound;
+
         gameContext.TurnTime += Time.deltaTime;
-        
-        if (gameContext.TurnCount >= _gameInfo.EachRoundTime)
+        if (gameContext.TurnTime >= _gameInfo.EachRoundTime)
         {
             StopMainPlayerTurn();
         }
 
+        if (Input.GetMouseButton(0))
+        {
+            Vector3 mousePosition = new Vector3(Input.mousePosition.x, Input.mousePosition.y, 0);
+            Vector3 objectPosition = Camera.main.ScreenToWorldPoint(mousePosition);
+            _tmpFactory.gameObject.transform.position = objectPosition;
+        }
+        
         if (Input.GetMouseButtonUp(0) && _selectFactoryType)
         {
             Ray ray = _camera.ScreenPointToRay(Input.mousePosition); //相机发射射线  
@@ -136,6 +175,8 @@ public class GameManager : MonoBehaviour
                     }
                 }
             }
+
+            _selectFactoryType = null;
         }
     }
 
@@ -178,7 +219,7 @@ public class GameManager : MonoBehaviour
         MyPlayer.SubmitAllValue();
         
         // 需要转到字符串头才能传
-        UserManager.ProxyManager.Call(FuncCode.Settle, new Settle(){
+        _userManager.ProxyManager.Call(FuncCode.Settle, new Settle(){
             ChessList = GameUtil.ConvertChessList(turnChessList)
         });
         SmallTurnEnd();

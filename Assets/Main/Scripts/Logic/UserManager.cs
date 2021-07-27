@@ -17,9 +17,10 @@ public class UserInfo
 
 public class GameInfo
 {
+    // 最大污染
     public float TotalPollution = 100;
     public int TotalRound = 15;
-    public float EachRoundTime = 50; 
+    public float EachRoundTime = 60; 
     public float InitGold = 100;
     public List<FactoryType> FactoryTypes; 
     public int FirstId = 0;
@@ -140,7 +141,7 @@ public class UserManager : MonoBehaviour
             });
         isMaster = true;
         // ui跳转
-        loadSceneName = "Room";
+        loadSceneName = "Game";
     }
     
     // 客机开始游戏
@@ -164,7 +165,7 @@ public class UserManager : MonoBehaviour
         Debug.Log("当前为从机，跳转到下一界面");
         isMaster = false;
         // ui跳转
-        loadSceneName = "Room";
+        loadSceneName = "Game";
     }
 }
 

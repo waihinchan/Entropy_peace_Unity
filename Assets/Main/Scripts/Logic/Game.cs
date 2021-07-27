@@ -17,6 +17,9 @@ public class GameContext
         OpDone = false;
         MyDone = false;
         TurnTime = 0f;
+        
+        TurnCount = 1;
+        Pollution = 0;
     }
 }
 

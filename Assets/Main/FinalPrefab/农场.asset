@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58184890d8b94f9d832c803f47771bf9, type: 3}
+  m_Name: "\u519C\u573A"
+  m_EditorClassIdentifier: 
+  Name: "\u519C\u573A"
+  Description: 
+  GenPollution: 10
+  GenGold: 10
+  CostGold: 25
+  RecyleGold: 13
+  FactoryOutlook: {fileID: 3426527731559102263, guid: 0f4e51ff5b3dd9d41a863a447e811b04, type: 3}

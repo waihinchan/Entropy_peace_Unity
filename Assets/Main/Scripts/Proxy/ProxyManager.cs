@@ -75,7 +75,7 @@ public class ProxyManager
         timeDelay = timeBack - timeGo;
         timeGo = Convert.ToInt64((DateTime.Now - new DateTime(1970, 1, 1, 0, 0, 0, 0))
             .TotalSeconds);
-        var reqData = JsonUtility.ToJson(new Empty());
+        var reqData = JsonUtility.ToJson(new HeartBeats());
         Call(FuncCode.HeartBeats, reqData);
         timer.Start();
     }
@@ -144,13 +144,22 @@ public class ProxyManager
         return true;
     }
     
-    public void Call(FuncCode funcName, string reqData)
+    public void Call(FuncCode funcName, object reqData)
     {
-        outMsgQueue.Enqueue((funcName, reqData));
+        var req = JsonUtility.ToJson(reqData);
+        outMsgQueue.Enqueue((funcName, req));
     }
 
     private void OnCall(string funcName, string data)
     {
+        FuncCode code;
+        var ok = FuncCode.TryParse(funcName, out code);
+        if (!ok)
+        {
+            Debug.Log("错误请求");
+        }
+        
+        var req = JsonUtility.FromJson(data, Type.GetType(funcName));
         MethodInfo mi = inputServer.GetType().GetMethod(funcName);
         mi.Invoke(inputServer, new object[]{data, this});
     }

@@ -12,7 +12,13 @@ public enum FuncCode
 }
 
 [Serializable] 
-public class Empty
+public class HeartBeats
+{
+}
+
+
+[Serializable] 
+public class HeartBeatsBack
 {
 }
 

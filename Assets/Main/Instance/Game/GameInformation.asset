@@ -17,6 +17,9 @@ MonoBehaviour:
   EachRoundTime: 50
   InitGold: 100
   FactoryTypes:
-  - {fileID: 11400000, guid: 7cdc0f2316972d74692e068aa2407756, type: 2}
-  - {fileID: 11400000, guid: 5406f0633807e46079b2e0d7986ce0b0, type: 2}
-  - {fileID: 11400000, guid: 41705687bea18479397af437289bea25, type: 2}
+  - {fileID: 11400000, guid: 3ddba618f067a5243ad0532135f98059, type: 2}
+  - {fileID: 11400000, guid: 6aedaa6d0ed813b41a1232aa667daea8, type: 2}
+  - {fileID: 11400000, guid: 8bc0ede6acc0e9f40b49c5da2be1f50d, type: 2}
+  - {fileID: 11400000, guid: 6eeb71d929eee104b9e49fdc53d7c320, type: 2}
+  - {fileID: 11400000, guid: 9cf6ca618f832694ab6414e825cf2cce, type: 2}
+  FirstId: 0

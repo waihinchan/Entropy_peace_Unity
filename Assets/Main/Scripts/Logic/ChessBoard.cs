@@ -10,16 +10,13 @@ public class ChessBoard : MonoBehaviour
     // Start is called before the first frame update
     public int totalChessBass = 36; //最大棋盘数..
     public GameObject chessBass; //这个是棋盘的底座.
-    public Transform offset;
+    public Vector3 offset = new Vector3(-2.8f,2.25f,-3f);
     public Chess[][] ChessMatrix;
 
     private UserManager userManager;
     
+    // -3 2.25 -3
     void PlaceChessBases(){
-
-        if(offset==null){
-            offset = transform;
-        }
         float x = chessBass.GetComponent<MeshFilter>().sharedMesh.bounds.size.x * chessBass.transform.lossyScale.x;
         float y = chessBass.GetComponent<MeshFilter>().sharedMesh.bounds.size.y * chessBass.transform.lossyScale.y;
         float z = chessBass.GetComponent<MeshFilter>().sharedMesh.bounds.size.z * chessBass.transform.lossyScale.z;
@@ -30,9 +27,10 @@ public class ChessBoard : MonoBehaviour
         {
             for (int j = 0; j < cols; j++)
             {
-                GameObject singleChess = Instantiate(chessBass, new Vector3(i*singlesize.x + 0.1f * i ,0,j*singlesize.z + j * 0.1f) + offset.position, Quaternion.identity);
+                GameObject singleChess = Instantiate(chessBass, new Vector3(i*singlesize.x + 0.1f * i ,0,j*singlesize.z + j * 0.1f) + offset, Quaternion.identity);
                 var chess = singleChess.GetComponent<Chess>();
                 chess.InitChess(null, (i,j), null);
+                chess.isOrigin = true;
             }
         }
     }
@@ -64,7 +62,7 @@ public class ChessBoard : MonoBehaviour
         Vector3 singlesize = new Vector3(x,y,z);
 
         var  newChessObj = Instantiate(factoryType.FactoryOutlook, new Vector3(index.Item1*singlesize.x + 0.1f * index.Item1 ,
-            0,index.Item2*singlesize.z + index.Item2 * 0.1f) + offset.position, Quaternion.identity);
+            0,index.Item2*singlesize.z + index.Item2 * 0.1f) + offset, Quaternion.identity);
 
         var newChess = newChessObj.GetComponent<Chess>();
         newChess.InitChess(factoryType, index, owner);
@@ -74,12 +72,6 @@ public class ChessBoard : MonoBehaviour
         return newChess;
     }
 
-    // 消隐棋子的位置
-    public void UnShowChess()
-    {
-        
-    }
-    
     public void RemoveChess(ValueTuple<int, int> index)
     {
         if (ChessMatrix[index.Item1][index.Item2] != null)

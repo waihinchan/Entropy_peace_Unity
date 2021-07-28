@@ -161,7 +161,7 @@ public class ProxyManager
         
         var req = JsonUtility.FromJson(data, Type.GetType(funcName));
         MethodInfo mi = inputServer.GetType().GetMethod(funcName);
-        mi.Invoke(inputServer, new object[]{data, this});
+        mi.Invoke(inputServer, new object[]{req, this});
     }
     
     public void CloseConnect()

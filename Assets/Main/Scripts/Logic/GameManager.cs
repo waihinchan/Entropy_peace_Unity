@@ -76,9 +76,8 @@ public class GameManager : MonoBehaviour
         if (!_userManager.isMaster)
         {
             // 将相机逆向
-            _camera.transform.position = new Vector3(0, 6, 5);
-            _camera.transform.Rotate(45, 180, 0);
-            _camera.transform.Rotate(new Vector3(45, 180, 0));
+            _camera.transform.position = new Vector3(0, 6, 6);
+            _camera.transform.localEulerAngles = new Vector3(45, 180, 0);
         }
     }
     
@@ -88,8 +87,6 @@ public class GameManager : MonoBehaviour
         
     }
 
-    private FactoryType _selectFactoryType;
-    private GameObject _tmpFactory;
     public void SelectBuilder(string builderName)
     {
         var ok = _factoryTypes.TryGetValue(builderName, out _selectFactoryType);
@@ -105,10 +102,12 @@ public class GameManager : MonoBehaviour
             _selectFactoryType = null;
             return;
         }
-        Vector3 mousePosition = new Vector3(Input.mousePosition.x, Input.mousePosition.y, 0);
-        Vector3 objectPosition = Camera.main.ScreenToWorldPoint(mousePosition);
-
-        _tmpFactory = Instantiate(_selectFactoryType.FactoryOutlook, objectPosition, Quaternion.identity);
+        Vector3 prePosition = new Vector3(0, 0, 0);
+        if (_tmpFactory)
+        {
+            Destroy(_tmpFactory);
+        }
+        _tmpFactory = Instantiate(_selectFactoryType.FactoryOutlook, prePosition, Quaternion.identity);
     }
 
     // 当结束回合时调用这个函数
@@ -126,6 +125,9 @@ public class GameManager : MonoBehaviour
     
     public Dictionary<ValueTuple<int, int>, FactoryType> ChoiceBuilderList = new Dictionary<(int, int), FactoryType>();
 
+    private FactoryType _selectFactoryType;
+    private GameObject _tmpFactory;
+    private Chess _selectOriginChess;
     void Update()
     {
         if (gameContext == null)
@@ -139,7 +141,7 @@ public class GameManager : MonoBehaviour
             return;
         }
         
-        timeText.text = "我方回合 ： " + (_gameInfo.EachRoundTime - gameContext.TurnTime) + "s";
+        timeText.text = "我方回合 ： " + (int)(_gameInfo.EachRoundTime - gameContext.TurnTime) + "s";
         moneyText.text = "总 " + MyPlayer.EachRoundInfo[ConstantString.CurrentOwnGold];
         everyMoneyText.text = "+ " + MyPlayer.EachRoundInfo[ConstantString.CurrentGenerateGold] + " / 回合 ";
         pollutionText.text = "总 " + gameContext.Pollution;
@@ -152,14 +154,26 @@ public class GameManager : MonoBehaviour
             StopMainPlayerTurn();
         }
 
-        if (Input.GetMouseButton(0))
+        if (_tmpFactory != null)
         {
-            Vector3 mousePosition = new Vector3(Input.mousePosition.x, Input.mousePosition.y, 0);
-            Vector3 objectPosition = Camera.main.ScreenToWorldPoint(mousePosition);
-            _tmpFactory.gameObject.transform.position = objectPosition;
+            Ray ray = _camera.ScreenPointToRay(Input.mousePosition); //相机发射射线  
+            RaycastHit hitInfo;
+            bool isCollider = Physics.Raycast(ray, out hitInfo);
+            if (isCollider)
+            {
+                if (hitInfo.transform.gameObject.GetComponent<Chess>() != null )
+                {
+                    var chess = hitInfo.transform.gameObject.GetComponent<Chess>();
+                    if (chess.isOrigin)
+                    {
+                        _tmpFactory.transform.position = chess.transform.position + new Vector3(0,0.2f, 0);
+                        _selectOriginChess = chess;
+                    }
+                }
+            }
         }
         
-        if (Input.GetMouseButtonUp(0) && _selectFactoryType)
+        if (Input.GetMouseButtonDown(0) && _selectFactoryType && _tmpFactory != null)
         {
             Ray ray = _camera.ScreenPointToRay(Input.mousePosition); //相机发射射线  
             RaycastHit hitInfo;
@@ -168,16 +182,18 @@ public class GameManager : MonoBehaviour
             {
                 if (hitInfo.transform.gameObject.GetComponent<Chess>() != null)
                 {
-                    var chess = hitInfo.transform.gameObject.GetComponent<Chess>();
-                    if (chess.Owner != null)
+                    var chess = _selectOriginChess;
+                    if(chess != null)
                     {
+                        _tmpFactory.transform.position = chess.transform.position;
                         _selectFactoryType = null;
-                    }
-                    else
-                    {
+                        _tmpFactory = null;
+                        Destroy(chess.gameObject);
                         MyPlayer.EachRoundInfo[ConstantString.CurrentOwnGold] -= _selectFactoryType.CostGold;
                         ChoiceBuilderList.Add(chess.Index, _selectFactoryType);
+                        return;
                     }
+                    chess = null;
                 }
             }
             Destroy(_tmpFactory);
@@ -218,9 +234,8 @@ public class GameManager : MonoBehaviour
     
     public void MySettle(List<ValueTuple<FactoryType, ValueTuple<int,int>>> turnChessList)
     {
-        SettleChess(turnChessList, MyPlayer);
+        // SettleChess(turnChessList, MyPlayer);
         gameContext.MyDone = true;
-        var settle = new Settle();
         MyPlayer.SubmitAllValue();
         
         // 需要转到字符串头才能传

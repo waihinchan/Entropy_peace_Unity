@@ -8,6 +8,7 @@ public class Chess: MonoBehaviour
     
     public ValueTuple<int,int> Index;
 
+    public bool isOrigin = false;
     public void Start()
     {
     }

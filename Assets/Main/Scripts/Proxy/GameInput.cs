@@ -32,13 +32,9 @@ public class GameInput
     public void Settle(object data, ProxyManager manager)
     {
         var settle = (Settle)(data);
-        var room = GameObject.Find("Game").GetComponent<GameManager>();
-        if (room != null)
-        {
-            Debug.Log("调用失败");
-            return;
-        }
-        room.OpSettle(settle.ChessList);
+        var room = GameObject.Find("Game");
+        var gameManager = room.GetComponent<GameManager>();
+        gameManager.OpSettle(settle.ChessList);
     }
     
 }

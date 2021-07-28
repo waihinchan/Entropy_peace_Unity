@@ -173,27 +173,29 @@ public class GameManager : MonoBehaviour
             }
         }
         
-        if (Input.GetMouseButtonDown(0) && _selectFactoryType && _tmpFactory != null)
+        if (Input.GetMouseButtonDown(0) && _selectFactoryType!=null && _tmpFactory != null)
         {
             Ray ray = _camera.ScreenPointToRay(Input.mousePosition); //相机发射射线  
             RaycastHit hitInfo;
             bool isCollider = Physics.Raycast(ray, out hitInfo);
             if (isCollider)
             {
-                if (hitInfo.transform.gameObject.GetComponent<Chess>() != null)
+                var chess = _selectOriginChess;
+                if(chess != null)
                 {
-                    var chess = _selectOriginChess;
-                    if(chess != null)
-                    {
-                        _tmpFactory.transform.position = chess.transform.position;
-                        _selectFactoryType = null;
-                        _tmpFactory = null;
-                        Destroy(chess.gameObject);
-                        MyPlayer.EachRoundInfo[ConstantString.CurrentOwnGold] -= _selectFactoryType.CostGold;
-                        ChoiceBuilderList.Add(chess.Index, _selectFactoryType);
-                        return;
-                    }
-                    chess = null;
+                    _tmpFactory.transform.position = chess.transform.position;
+                    var newChess = _tmpFactory.transform.GetComponent<Chess>();
+                    newChess.InitChess(_selectFactoryType, chess.Index, MyPlayer);
+                    ChessBoard.ChessMatrix[chess.Index.Item1][chess.Index.Item2] = newChess;
+                    MyPlayer.AddChess(newChess);
+                    MyPlayer.EachRoundInfo[ConstantString.CurrentOwnGold] -= _selectFactoryType.CostGold;
+                    ChoiceBuilderList.Add(chess.Index, _selectFactoryType);
+
+                    _selectFactoryType = null;
+                    _tmpFactory = null;
+                    _selectOriginChess = null;
+                    Destroy(chess.gameObject);
+                    return;
                 }
             }
             Destroy(_tmpFactory);

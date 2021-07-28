@@ -67,7 +67,6 @@ public class ChessBoard : MonoBehaviour
         var newChess = newChessObj.GetComponent<Chess>();
         newChess.InitChess(factoryType, index, owner);
         ChessMatrix[index.Item1][index.Item2] = newChess;
-        
         owner.AddChess(newChess); 
         return newChess;
     }

@@ -3,13 +3,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ChessBoard : MonoBehaviour
-{
+public partial class ChessBoard : MonoBehaviour
+{   
+    public GameObject chessBassA; //这个是棋盘的底座.
+    public GameObject chessBassB; //这个是棋盘的底座.
     public const int ChessWidth = 6; //最大棋盘数
 
     // Start is called before the first frame update
     public int totalChessBass = 36; //最大棋盘数..
     public GameObject chessBass; //这个是棋盘的底座.
+    public Transform offsetTarget;
     public Vector3 offset = new Vector3(-2.8f,2.25f,-3f);
     public Chess[][] ChessMatrix;
 
@@ -23,14 +26,25 @@ public class ChessBoard : MonoBehaviour
         Vector3 singlesize = new Vector3(x,y,z);
         int rows = (int)Mathf.Floor(Mathf.Sqrt(totalChessBass));
         int cols = rows;
+        int count = 0;
+        int countList = 0;
         for (int i = 0; i < rows; i++)
         {
             for (int j = 0; j < cols; j++)
-            {
-                GameObject singleChess = Instantiate(chessBass, new Vector3(i*singlesize.x + 0.1f * i ,0,j*singlesize.z + j * 0.1f) + offset, Quaternion.identity);
+            {   
+                Vector3 chessposition = new Vector3(i*singlesize.x + 0.0f * i  - 7.5f ,0,j*singlesize.z + j * 0.0f - 7.5f) + offsetTarget.position;
+         
+                GameObject singleChess = countList%2==0?Instantiate(chessBassA, chessposition , Quaternion.identity):Instantiate(chessBassB, chessposition , Quaternion.identity);
+  
+                //GameObject singleChess = Instantiate(chessBass, new Vector3(i*singlesize.x + 0.1f * i ,0,j*singlesize.z + j * 0.1f) + offset, Quaternion.identity);
                 var chess = singleChess.GetComponent<Chess>();
                 chess.InitChess(null, (i,j), null);
                 chess.isOrigin = true;
+                count++;
+                countList++;
+                if(count%6==0){
+                    countList+=1;
+                }
             }
         }
     }

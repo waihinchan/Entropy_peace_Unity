@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using UnityEngine;
 using UnityEngine.PlayerLoop;
 using UnityEngine.SceneManagement;
@@ -27,6 +28,8 @@ public class GameInfo
     public int Id = 0;
 }
 
+public delegate void CallNext(object obj);
+
 public class UserManager : MonoBehaviour
 {
     // 游戏初始化数据，由主机指定
@@ -38,13 +41,16 @@ public class UserManager : MonoBehaviour
     public UserInfo MyUserInfo;
     public UserInfo OpUserInfo;
 
+    public string Username;
+    public string Host;
+    
     public bool isMaster = false;
     private void Start()
     {
         GameInfo = new GameInfo();
         GameInfo.FactoryTypes = GameInitInfo.FactoryTypes;
         GameInfo.InitGold = GameInitInfo.InitGold;
-        GameInfo.TotalPollution = GameInitInfo.TotalRound;
+        GameInfo.TotalPollution = GameInitInfo.TotalPollution;
         GameInfo.EachRoundTime = GameInitInfo.EachRoundTime;
         GameInfo.TotalRound = GameInitInfo.TotalRound;
         GameInfo.Id = 0;
@@ -83,17 +89,19 @@ public class UserManager : MonoBehaviour
             Debug.Log("未有足够的金钱参加比赛");
             return;
         }
+        Username = GameObject.Find("Canvas/名字").GetComponent<InputField>().text;
         ProxyManager.StartServer();
         Debug.Log("房间启动中,等待加入");
     }
 
     public void JoinRoom()
     {
-        var host = GameObject.Find("Canvas/Ip/Text").GetComponent<Text>().text;
-        JoinRoom(host);
+        Host = GameObject.Find("Canvas/Ip").GetComponent<InputField>().text;
+        Username = GameObject.Find("Canvas/名字").GetComponent<InputField>().text;
+        JoinRoom(Host, Username);
     }
     
-    public void JoinRoom(string host)
+    public void JoinRoom(string host, string username)
     {
         if (LocalUserInfo.GameMoney < 20)
         {
@@ -105,19 +113,42 @@ public class UserManager : MonoBehaviour
         ProxyManager.Call(FuncCode.GiveUserInfo, 
             new GiveUserInfo()
         {
-            UserName = LocalUserInfo.UserName,
+            UserName = username,
         });
     }
+    
+    public Dictionary<FuncCode, List<CallNext>> _callNextDict = new Dictionary<FuncCode, List<CallNext>>();
 
-    // public bool GameStart()
-    // {
-    //     return myUserInfo != null && opUserInfo != null;
-    // }
+    public void RegisterCallNext(FuncCode funcCode, CallNext callNext)
+    {
+        List<CallNext> callNextList;
+        bool ok = _callNextDict.TryGetValue(funcCode, out callNextList);
+        if (!ok)
+        {
+            callNextList = new List<CallNext>();
+            _callNextDict.Add(funcCode, callNextList);
+        }
+        callNextList.Add(callNext);
+    }
+    
+    public void TriggerCall(FuncCode funcCode, object obj)
+    {
+        List<CallNext> callNextList;
+        bool ok = _callNextDict.TryGetValue(funcCode, out callNextList);
+        if (!ok)
+        {
+            return;
+        }
+        foreach (var callNext in callNextList)
+        {
+            callNext(obj);
+        }
+    }
     
     // 主机开始游戏
     public void MasterGameStart(string userName)
     {
-        MyUserInfo = new UserInfo(LocalUserInfo.UserName);
+        MyUserInfo = new UserInfo(Username);
         OpUserInfo = new UserInfo(userName);
         Debug.Log("当前为主机，跳转到下一界面");
         
@@ -131,7 +162,7 @@ public class UserManager : MonoBehaviour
             new GiveGameInfo()
             {
                 FactoryTypesName = factoryTypes,
-                MasterUserName = LocalUserInfo.UserName,
+                MasterUserName = Username,
                 InitGold = GameInitInfo.InitGold,
                 TotalPollution = GameInitInfo.TotalPollution,
                 TotalRound = GameInitInfo.TotalRound,
@@ -143,11 +174,16 @@ public class UserManager : MonoBehaviour
         // ui跳转
         loadSceneName = "Game";
     }
+
+    public void EnterScene(string sceneName)
+    {
+        loadSceneName = sceneName;
+    }
     
     // 客机开始游戏
     public void SlaverGameStart(GiveGameInfo gameInfo)
     {
-        MyUserInfo = new UserInfo(LocalUserInfo.UserName);
+        MyUserInfo = new UserInfo(Username);
         OpUserInfo = new UserInfo(gameInfo.MasterUserName);
         GameInfo = new GameInfo();
         List<FactoryType> factoryTypes = new List<FactoryType>();
@@ -157,7 +193,7 @@ public class UserManager : MonoBehaviour
         }
         GameInfo.FactoryTypes = factoryTypes;
         GameInfo.InitGold = gameInfo.InitGold;
-        GameInfo.TotalPollution = gameInfo.TotalRound;
+        GameInfo.TotalPollution = gameInfo.TotalPollution;
         GameInfo.EachRoundTime = gameInfo.EachRoundTime;
         GameInfo.TotalRound = gameInfo.TotalRound;
         GameInfo.Id = gameInfo.Id;

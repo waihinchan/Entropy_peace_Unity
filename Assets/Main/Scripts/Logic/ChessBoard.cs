@@ -32,11 +32,11 @@ public partial class ChessBoard : MonoBehaviour
         {
             for (int j = 0; j < cols; j++)
             {   
-                Vector3 chessposition = new Vector3(i*singlesize.x + 0.0f * i  - 7.5f ,0,j*singlesize.z + j * 0.0f - 7.5f) + offsetTarget.position;
+                // Vector3 chessposition = new Vector3(i*singlesize.x + 0.0f * i  - 7.5f ,0,j*singlesize.z + j * 0.0f - 7.5f) + offsetTarget.position;
          
-                GameObject singleChess = countList%2==0?Instantiate(chessBassA, chessposition , Quaternion.identity):Instantiate(chessBassB, chessposition , Quaternion.identity);
+                // GameObject singleChess = countList%2==0?Instantiate(chessBassA, chessposition , Quaternion.identity):Instantiate(chessBassB, chessposition , Quaternion.identity);
   
-                //GameObject singleChess = Instantiate(chessBass, new Vector3(i*singlesize.x + 0.1f * i ,0,j*singlesize.z + j * 0.1f) + offset, Quaternion.identity);
+                GameObject singleChess = Instantiate(chessBass, new Vector3(i*singlesize.x + 0.1f * i ,0,j*singlesize.z + j * 0.1f) + offset, Quaternion.identity);
                 var chess = singleChess.GetComponent<Chess>();
                 chess.InitChess(null, (i,j), null);
                 chess.isOrigin = true;
@@ -81,6 +81,7 @@ public partial class ChessBoard : MonoBehaviour
         var newChess = newChessObj.GetComponent<Chess>();
         newChess.InitChess(factoryType, index, owner);
         ChessMatrix[index.Item1][index.Item2] = newChess;
+        owner.CurrentOwnGold -= factoryType.CostGold;
         owner.AddChess(newChess); 
         return newChess;
     }

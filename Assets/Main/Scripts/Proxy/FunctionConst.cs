@@ -1,6 +1,7 @@
 ﻿
 using System;
 using System.Collections.Generic;
+using UnityEngine;
 
 public enum FuncCode
 {
@@ -44,5 +45,24 @@ public class GiveGameInfo
 [Serializable] 
 public class Settle
 {
-    public List<ValueTuple<string,ValueTuple<int,int>>> ChessList;
+    public List<ChessInfo> ChessList;
+}
+
+[Serializable] 
+public class ChessInfo
+{
+    public int x;
+    public int y;
+    public string typeName;
+}
+
+public class Test{
+    public static void main()
+    {
+        // Settle settle = new Settle();
+        // var a = new List<ValueTuple<string, ValueTuple<int, int>>>();
+        // a.Add(("ggg",(1,1)));
+        // var ss = JsonUtility.ToJson(settle);
+        // Console.WriteLine(ss);
+    }
 }

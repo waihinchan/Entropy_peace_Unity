@@ -13,7 +13,13 @@ public class GameManager : MonoBehaviour
     private GameInfo _gameInfo;
     private Game _game;
     private Camera _camera;
-    
+
+    private GameObject _endCanvas;
+    private GameObject _normalGui;
+    private GameObject _successCanvas;
+    private GameObject _failCanvas;
+    private GameObject _tieCanvas;
+
     private Dictionary<string, FactoryType> _factoryTypes = new Dictionary<string, FactoryType>();
     private GameContext gameContext
     {
@@ -47,14 +53,26 @@ public class GameManager : MonoBehaviour
     private Text pollutionText;
     private Text everyPollytionText;
     private Text turnText;
+    private Text usernameText;
+    private bool endFlag = false;
     public void Start()
     {
+        _normalGui = GameObject.Find("GUI");
+        _endCanvas = GameObject.Find("Canvas");
+        _successCanvas = GameObject.Find("Canvas/游戏结束页面（请根据场景切换）/胜利");
+        _tieCanvas = GameObject.Find("Canvas/游戏结束页面（请根据场景切换）/集体失败");
+        _failCanvas = GameObject.Find("Canvas/游戏结束页面（请根据场景切换）/个人失败");
+        _normalGui.SetActive(true);
+        _endCanvas.SetActive(false);
+        
         timeText = GameObject.Find("GUI/BottomStatus/CONTROLPANEL/我的名字").GetComponent<Text>();
         moneyText = GameObject.Find("GUI/TopStatus/金币信息BG/每回合生产金币信息").GetComponent<Text>();
         everyMoneyText = GameObject.Find("GUI/TopStatus/金币信息BG/当前拥有总金币").GetComponent<Text>();
         pollutionText = GameObject.Find("GUI/TopStatus/污染信息BG/每回合生产金币信息").GetComponent<Text>();
         everyPollytionText = GameObject.Find("GUI/TopStatus/污染信息BG/当前拥有总金币").GetComponent<Text>();
         turnText = GameObject.Find("GUI/BottomStatus/当前回合 (1)").GetComponent<Text>();
+        usernameText = GameObject.Find("GUI/TopStatus/WHOSTURN").GetComponent<Text>();
+        
         _userManager = GameObject.Find("Manager").GetComponent<UserManager>();
         
         _gameInfo = _userManager.GameInfo;
@@ -67,9 +85,9 @@ public class GameManager : MonoBehaviour
         _game = GetComponent<Game>();
         _userManager = GameObject.Find("Manager").GetComponent<UserManager>();
         MyPlayer = new Player(_userManager.MyUserInfo.UserName);
-        MyPlayer.EachRoundInfo[ConstantString.CurrentOwnGold] = _gameInfo.InitGold;
+        MyPlayer.CurrentOwnGold = _gameInfo.InitGold;
         OpPlayer = new Player(_userManager.OpUserInfo.UserName);
-        OpPlayer.EachRoundInfo[ConstantString.CurrentOwnGold] = _gameInfo.InitGold;
+        OpPlayer.CurrentOwnGold = _gameInfo.InitGold;
 
         _camera = GameObject.Find("Main Camera").GetComponent<Camera>();
         // 如果不是主机
@@ -79,12 +97,36 @@ public class GameManager : MonoBehaviour
             _camera.transform.position = new Vector3(0, 6, 6);
             _camera.transform.localEulerAngles = new Vector3(45, 180, 0);
         }
+        
+        _userManager.RegisterCallNext(FuncCode.Settle, OpSettle);
     }
     
-    public void GameOver()
+    public void GameOver(int result)
     {
-        // 判断输赢结算等逻辑
-        
+        // 0： 失败
+        // 1: 胜利
+        // 3: 平局
+        _normalGui.SetActive(false);
+        _endCanvas.SetActive(true);
+        if (result == 0)
+        {
+            _successCanvas.SetActive(false);
+            _tieCanvas.SetActive(false);
+            _failCanvas.SetActive(true);
+        }else if (result == 1)
+        {
+            _successCanvas.SetActive(true);
+            _tieCanvas.SetActive(false);
+            _failCanvas.SetActive(false);
+        }
+        else
+        {
+            _successCanvas.SetActive(false);
+            _tieCanvas.SetActive(true);
+            _failCanvas.SetActive(false);
+        }
+
+        endFlag = true;
     }
 
     public void SelectBuilder(string builderName)
@@ -97,7 +139,7 @@ public class GameManager : MonoBehaviour
             return;
         }
 
-        if (_selectFactoryType.CostGold > MyPlayer.EachRoundInfo[ConstantString.CurrentOwnGold])
+        if (_selectFactoryType.CostGold > MyPlayer.CurrentOwnGold)
         {
             _selectFactoryType = null;
             return;
@@ -117,7 +159,7 @@ public class GameManager : MonoBehaviour
         List<ValueTuple<FactoryType, ValueTuple<int,int>>> turnChessList = new List<(FactoryType, (int, int))>();
         foreach (var keyValue in builderList)
         {
-            turnChessList.Append((keyValue.Value, keyValue.Key));
+            turnChessList.Add((keyValue.Value, keyValue.Key));
         }
         MySettle(turnChessList);
         builderList.Clear();
@@ -128,27 +170,46 @@ public class GameManager : MonoBehaviour
     private FactoryType _selectFactoryType;
     private GameObject _tmpFactory;
     private Chess _selectOriginChess;
+    
+    private Settle waitSettle = null;
     void Update()
     {
+        if (endFlag)
+        {
+            return;
+        }
+        
         if (gameContext == null)
         {
             Debug.Log("游戏未开始");;
             return;
         }
 
+        if (waitSettle != null)
+        {
+            var turnChessList = GameUtil.ConvertChessList(waitSettle.ChessList);
+            SettleChess(turnChessList, OpPlayer);
+            gameContext.OpDone = true;
+            OpPlayer.SubmitAllValue();
+            SmallTurnEnd();
+            waitSettle = null;
+        }
+        
+        gameContext.TurnTime += Time.deltaTime;
+
+        timeText.text = "我方回合 ： " + (int)(_gameInfo.EachRoundTime - gameContext.TurnTime) + "s";
+        moneyText.text = "总 " + MyPlayer.CurrentOwnGold;
+        everyMoneyText.text = "+ " + MyPlayer.CurrentGenerateGold + " / 回合 ";
+        pollutionText.text = "总 " + gameContext.Pollution;
+        everyPollytionText.text = "+ " + MyPlayer.CurrentGeneratePollution + " / 回合 ";
+        turnText.text = gameContext.TurnCount+"/"+_gameInfo.TotalRound;
+        usernameText.text = gameContext.IsMyTurn ? MyPlayer.name : OpPlayer.name +"的回合";
+        
         if (!gameContext.IsMyTurn)
         {
             return;
         }
         
-        timeText.text = "我方回合 ： " + (int)(_gameInfo.EachRoundTime - gameContext.TurnTime) + "s";
-        moneyText.text = "总 " + MyPlayer.EachRoundInfo[ConstantString.CurrentOwnGold];
-        everyMoneyText.text = "+ " + MyPlayer.EachRoundInfo[ConstantString.CurrentGenerateGold] + " / 回合 ";
-        pollutionText.text = "总 " + gameContext.Pollution;
-        everyPollytionText.text = "+ " + MyPlayer.EachRoundInfo[ConstantString.CurrentGeneratePollution] + " / 回合 ";
-        turnText.text = gameContext.TurnCount+"/"+_gameInfo.TotalRound;
-
-        gameContext.TurnTime += Time.deltaTime;
         if (gameContext.TurnTime >= _gameInfo.EachRoundTime)
         {
             StopMainPlayerTurn();
@@ -183,18 +244,17 @@ public class GameManager : MonoBehaviour
                 var chess = _selectOriginChess;
                 if(chess != null)
                 {
-                    _tmpFactory.transform.position = chess.transform.position;
+                    _tmpFactory.transform.position = chess.transform.position + new Vector3(0,0.2f,0);
                     var newChess = _tmpFactory.transform.GetComponent<Chess>();
                     newChess.InitChess(_selectFactoryType, chess.Index, MyPlayer);
                     ChessBoard.ChessMatrix[chess.Index.Item1][chess.Index.Item2] = newChess;
                     MyPlayer.AddChess(newChess);
-                    MyPlayer.EachRoundInfo[ConstantString.CurrentOwnGold] -= _selectFactoryType.CostGold;
+                    MyPlayer.CurrentOwnGold -= _selectFactoryType.CostGold;
                     ChoiceBuilderList.Add(chess.Index, _selectFactoryType);
 
                     _selectFactoryType = null;
                     _tmpFactory = null;
                     _selectOriginChess = null;
-                    Destroy(chess.gameObject);
                     return;
                 }
             }
@@ -209,10 +269,22 @@ public class GameManager : MonoBehaviour
         gameContext.TurnTime = 0;
         gameContext.TurnCount += 1;
 
+        gameContext.Pollution += (int) (MyPlayer.CurrentGeneratePollution + OpPlayer.CurrentGeneratePollution);
         if (IsGameEnd)
         {
             Debug.Log("Game over!!!");
-            GameOver();
+            int result = 2;
+            if (gameContext.Pollution >= _gameInfo.TotalPollution)
+            {
+                result = 2;
+            }else if (MyPlayer.CurrentGenerateGold < OpPlayer.CurrentGenerateGold)
+            {
+                result = 0;
+            }else if (MyPlayer.CurrentGenerateGold < OpPlayer.CurrentGenerateGold)
+            {
+                result = 1;
+            }
+            GameOver(result);
         }
     }
     
@@ -247,14 +319,10 @@ public class GameManager : MonoBehaviour
         SmallTurnEnd();
     }
 
-    public void OpSettle(List<ValueTuple<string, ValueTuple<int,int>>> turnChessNameList)
+    public void OpSettle(object obj)
     {
-        var turnChessList = GameUtil.ConvertChessList(turnChessNameList);
-        SettleChess(turnChessList, OpPlayer);
-        gameContext.OpDone = true;
-        OpPlayer.SubmitAllValue();
-
-        SmallTurnEnd();
+        var settle = (Settle) obj;
+        waitSettle = settle;
     }
 
 }

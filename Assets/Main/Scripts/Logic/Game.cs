@@ -1,5 +1,6 @@
 ﻿using System;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameContext
 {
@@ -33,5 +34,15 @@ public class Game : MonoBehaviour
         _userManager = GameObject.Find("Manager").GetComponent<UserManager>();
         _gameInfo = _userManager.GameInfo;
         GameContext = new GameContext(_gameInfo.Id == _gameInfo.FirstId);
+    }
+
+    public void PlayAgain()
+    {
+        _userManager.JoinRoom(_userManager.Host, _userManager.Username); ;
+    }
+
+    public void Return(string sceneName)
+    {
+        SceneManager.LoadScene(sceneName);
     }
 }

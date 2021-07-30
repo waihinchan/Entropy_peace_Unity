@@ -34,24 +34,29 @@ public class GameUtil
     }
 
     public static List<ValueTuple<FactoryType, ValueTuple<int, int>>> ConvertChessList(
-        List<ValueTuple<string, ValueTuple<int, int>>> chessNameList)
+        List<ChessInfo> chessInfoList)
     {
         List<ValueTuple<FactoryType, ValueTuple<int, int>>> chessList = new List<ValueTuple<FactoryType, ValueTuple<int, int>>>();
-        foreach (var chessNameInfo in chessNameList)
+        foreach (var chessInfo in chessInfoList)
         {
-            chessList.Add((ConvertStringToFactory(chessNameInfo.Item1), chessNameInfo.Item2));
+            chessList.Add((ConvertStringToFactory(chessInfo.typeName), (chessInfo.x,chessInfo.y)));
         }
 
         return chessList;
     }
     
-    public static List<ValueTuple<string, ValueTuple<int, int>>> ConvertChessList(
+    public static List<ChessInfo> ConvertChessList(
         List<ValueTuple<FactoryType, ValueTuple<int, int>>> chessNameList)
     {
-        List<ValueTuple<string, ValueTuple<int, int>>> chessList = new List<ValueTuple<string, ValueTuple<int, int>>>();
+        List<ChessInfo> chessList = new List<ChessInfo>();
         foreach (var chessNameInfo in chessNameList)
         {
-            chessList.Add((ConvertFactoryToString(chessNameInfo.Item1), chessNameInfo.Item2));
+            chessList.Add(new ChessInfo()
+            {
+                typeName = chessNameInfo.Item1.Name,
+                x = chessNameInfo.Item2.Item1,
+                y = chessNameInfo.Item2.Item2,
+            });
         }
         return chessList;
     }

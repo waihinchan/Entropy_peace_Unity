@@ -203,7 +203,7 @@ public class GameManager : MonoBehaviour
         pollutionText.text = "总 " + gameContext.Pollution;
         everyPollytionText.text = "+ " + MyPlayer.CurrentGeneratePollution + " / 回合 ";
         turnText.text = gameContext.TurnCount+"/"+_gameInfo.TotalRound;
-        usernameText.text = gameContext.IsMyTurn ? MyPlayer.name : OpPlayer.name +"的回合";
+        usernameText.text = (gameContext.IsMyTurn ? MyPlayer.name : OpPlayer.name) +"的回合";
         
         if (!gameContext.IsMyTurn)
         {

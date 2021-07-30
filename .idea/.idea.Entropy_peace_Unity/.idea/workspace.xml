@@ -1,0 +1,695 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="c5c51e40-821b-468a-81ec-a5101bfe0f1e" name="Default Changelist" comment="fc">
+      <change afterPath="$PROJECT_DIR$/Assets/Main/Scripts/GUI/WelcomeShowHelper.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Main/gui-游戏界面/btn_huihe.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Main/gui-游戏界面/btn_huihe.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Main/gui-游戏界面/btn_huiqi.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Main/gui-游戏界面/btn_huiqi.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Main/gui-游戏界面/btn_selectedcard_blue.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Main/gui-游戏界面/btn_selectedcard_blue.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Main/gui-游戏界面/btn_selectedcard_yellow.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Main/gui-游戏界面/btn_selectedcard_yellow.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Main/gui-游戏界面/btn_unselectcard_blue.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Main/gui-游戏界面/btn_unselectcard_blue.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Main/gui-游戏界面/btn_unselectcard_yellow.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Main/gui-游戏界面/btn_unselectcard_yellow.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Main/gui-游戏界面/gui 2.psd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Main/gui-游戏界面/gui 2.psd.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Main/gui-游戏界面/pic_bg1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Main/gui-游戏界面/pic_bg1.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Main/gui-游戏界面/pic_bg2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Main/gui-游戏界面/pic_bg2.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Main/gui-游戏界面/pic_dianchang.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Main/gui-游戏界面/pic_dianchang.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Main/gui-游戏界面/pic_gongchang.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Main/gui-游戏界面/pic_gongchang.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Main/gui-游戏界面/pic_huihe_bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Main/gui-游戏界面/pic_huihe_bg.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Main/gui-游戏界面/pic_jinghuata.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Main/gui-游戏界面/pic_jinghuata.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Main/gui-游戏界面/pic_money.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Main/gui-游戏界面/pic_money.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Main/gui-游戏界面/pic_nongchang.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Main/gui-游戏界面/pic_nongchang.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Main/gui-游戏界面/pic_number.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Main/gui-游戏界面/pic_number.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Main/gui-游戏界面/pic_pollution.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Main/gui-游戏界面/pic_pollution.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Main/gui-游戏界面/pic_sea_processbar.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Main/gui-游戏界面/pic_sea_processbar.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Main/gui-游戏界面/pic_shan_red.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Main/gui-游戏界面/pic_shan_red.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Main/gui-游戏界面/pic_shan_white.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Main/gui-游戏界面/pic_shan_white.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Main/gui-游戏界面/pic_xinnengyuan.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Main/gui-游戏界面/pic_xinnengyuan.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Deault.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GUIdemoOverride.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Main/ARTDEMO/Scripts/Water/PlanerReflection.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Main/ARTDEMO/Scripts/Water/PlanerReflection.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Main/ARTDEMO/Scripts/Water/Water.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Main/ARTDEMO/Scripts/Water/Water.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Main/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Main/Scenes/Game.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Main/Scenes/Welcome.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Main/Scenes/Welcome.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Main/Scripts/Logic/ChessBoard.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Main/Scripts/Logic/ChessBoard.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Main/Scripts/Logic/Game.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Main/Scripts/Logic/Game.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Main/Scripts/Logic/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Main/Scripts/Logic/GameManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Main/Scripts/Logic/GameUtil.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Main/Scripts/Logic/GameUtil.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Main/Scripts/Logic/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Main/Scripts/Logic/Player.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Main/Scripts/Logic/UserManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Main/Scripts/Logic/UserManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Main/Scripts/Proxy/FunctionConst.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Main/Scripts/Proxy/FunctionConst.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Main/Scripts/Proxy/GameInput.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Main/Scripts/Proxy/GameInput.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Main/Scripts/Proxy/ProxyManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Main/Scripts/Proxy/ProxyManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/ApiUpdaterCheck.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/ApiUpdaterCheck.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/AssetImportWorker0.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/AssetImportWorker0.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-AssetImportWorker0.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-AssetImportWorker0.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe0.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe0.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe1.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe1.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe10.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe10.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe11.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe11.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe12.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe12.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe13.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe13.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe14.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe14.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe15.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe15.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe2.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe2.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe3.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe3.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe4.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe4.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe5.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe5.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe6.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe6.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe7.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe7.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe8.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe8.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe9.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe9.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Pull.Settings">
+    <option name="BRANCH" value="newGame" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/8462C93B-00B5-4616-9C50-6EB8281FD255/e6/ebca3792/Tuple`2.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/EAE584CE-26BC-4022-9C1B-1AA476BFA589/22/e7e168ef/IEnumerator.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://C:/Program Files/Unity/Hub/Editor/2020.3.0f1c1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/UI/Core/Button.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/AA976C21-0410-4B7C-A9E1-785715722C9D/81/de394af8/Queue`1.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/AA976C21-0410-4B7C-A9E1-785715722C9D/61/de6897ef/Socket.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/8B1B853B-398D-4AB3-B0C6-41E5B7CBAE4C/14/a7c3b97c/JsonUtility.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/EAE584CE-26BC-4022-9C1B-1AA476BFA589/b8/da65c9f4/MethodBase.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/EAE584CE-26BC-4022-9C1B-1AA476BFA589/69/f8136297/NullReferenceException.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/AA976C21-0410-4B7C-A9E1-785715722C9D/4c/2ef0d011/SocketAsyncResult.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/EAE584CE-26BC-4022-9C1B-1AA476BFA589/d7/d9faaf22/ValueTuple`2.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/EAE584CE-26BC-4022-9C1B-1AA476BFA589/ab/28bf3992/Enum.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/EDF5480B-ED5D-4287-AED7-FF3FB9B63D9F/18/a2478d52/MonoBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://C:/Program Files/Unity/Hub/Editor/2020.3.0f1c1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/EventSystem/UIBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/EAE584CE-26BC-4022-9C1B-1AA476BFA589/94/e5c86f33/QueueUserWorkItemCallback.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/AA976C21-0410-4B7C-A9E1-785715722C9D/3a/1bc67b95/Timer.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/EAE584CE-26BC-4022-9C1B-1AA476BFA589/99/6f33eb90/ThreadPoolWorkQueue.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/8462C93B-00B5-4616-9C50-6EB8281FD255/74/48499ca5/IEnumerator.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/EAE584CE-26BC-4022-9C1B-1AA476BFA589/73/47f04053/_ThreadPoolWaitCallback.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/EAE584CE-26BC-4022-9C1B-1AA476BFA589/2f/a2db80a9/BitConverter.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Main/Scripts/GUI/WelcomeShowHelper.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/EAE584CE-26BC-4022-9C1B-1AA476BFA589/a4/c5bdd761/MonoMethod.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/EAE584CE-26BC-4022-9C1B-1AA476BFA589/b0/1092a8d1/Encoding.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://C:/Program Files/Unity/Hub/Editor/2020.3.0f1c1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/EventSystem/ExecuteEvents.cs" root0="SKIP_HIGHLIGHTING" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/Assets/Main/Scripts/Logic/Document.cs" />
+        <option value="$PROJECT_DIR$/Assets/Main/Scripts/Proxy.cs" />
+        <option value="$PROJECT_DIR$/Assets/Main/Scripts/GameOuput.cs" />
+        <option value="$PROJECT_DIR$/Assets/Main/Scripts/Proxy/ClientManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Main/Scripts/Proxy/ProxyHelper.cs" />
+        <option value="$PROJECT_DIR$/Assets/Main/Scripts/Logic/MasterManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Main/Scripts/Logic/UserDataManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Main/Scripts/Logic/Data.cs" />
+        <option value="$PROJECT_DIR$/Assets/Main/Scripts/Proxy/GameOutput.cs" />
+        <option value="$PROJECT_DIR$/Assets/Main/Scripts/Logic/RoomDataManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Main/Scripts/Logic/RoomManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Main/Scripts/Proxy/ClientConfig.cs" />
+        <option value="$PROJECT_DIR$/Assets/Main/Scripts/Logic/AllDebugClass.cs" />
+        <option value="$PROJECT_DIR$/Assets/Main/Scripts/Logic/RoomState.cs" />
+        <option value="$PROJECT_DIR$/Assets/Main/Scripts/Logic/Factory_Type.cs" />
+        <option value="$PROJECT_DIR$/Assets/Main/Scripts/Logic/RoomInitInfo.cs" />
+        <option value="$PROJECT_DIR$/Assets/Main/Scripts/Art/ChessBoard.cs" />
+        <option value="$PROJECT_DIR$/Assets/Main/Scripts/Logic/Chessbass.cs" />
+        <option value="$PROJECT_DIR$/Library/PackageCache/com.unity.shadergraph@10.3.2/Editor/Data/Util/SerializationHelper.cs" />
+        <option value="$PROJECT_DIR$/Assets/Main/Scripts/Logic/FactoryType.cs" />
+        <option value="$PROJECT_DIR$/Assets/Main/Scripts/Logic/LocalUserInfo.cs" />
+        <option value="$PROJECT_DIR$/Assets/Main/Scripts/Logic/GameDataDef.cs" />
+        <option value="$PROJECT_DIR$/Assets/Main/Scripts/Logic/ConstantString.cs" />
+        <option value="$PROJECT_DIR$/Assets/Main/Scripts/Logic/GameInitInfo.cs" />
+        <option value="$PROJECT_DIR$/Assets/Main/Scripts/Logic/Room.cs" />
+        <option value="$PROJECT_DIR$/Assets/Main/Scripts/Logic/GameView.cs" />
+        <option value="$PROJECT_DIR$/Assets/Main/ChessBoard.cs" />
+        <option value="$PROJECT_DIR$/Assets/GUIdemoOverride/Main/Scripts/Art/ChessBoard.cs" />
+        <option value="$PROJECT_DIR$/Assets/GUIdemoOverride/Main/Scripts/Art/SimpleCameraController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Main/Scripts/Logic/MainPlayer.cs" />
+        <option value="$PROJECT_DIR$/Assets/Main/Scripts/Logic/Chess.cs" />
+        <option value="$PROJECT_DIR$/Assets/Main/Scripts/GUI/WelcomeShowHelper.cs" />
+        <option value="$PROJECT_DIR$/Assets/Main/Scripts/Proxy/MessageHandler.cs" />
+        <option value="$PROJECT_DIR$/Assets/Main/Scripts/Proxy/GameInput.cs" />
+        <option value="$PROJECT_DIR$/Assets/Main/Scripts/Proxy/ProxyManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Main/Scripts/Proxy/FunctionConst.cs" />
+        <option value="$PROJECT_DIR$/Assets/Main/Scripts/Logic/GameUtil.cs" />
+        <option value="$PROJECT_DIR$/Assets/Main/Scripts/Logic/Player.cs" />
+        <option value="$PROJECT_DIR$/Assets/Main/Scripts/Logic/ChessBoard.cs" />
+        <option value="$PROJECT_DIR$/Assets/Main/Scripts/Logic/GameManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Main/Scripts/Logic/UserManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Main/Scripts/Logic/Game.cs" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1ufHZQFjOFsccPjPO1XW2zoc3LG" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DebuggerViewTab_PTCS_FirstProportionKey" value="0.20519836" />
+    <property name="DebuggerViewTab_PTCS_LastProportionKey" value="0.1764706" />
+    <property name="Discover.Launch.Via.Unity" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+    <configuration name="Test.main" type="DotNetStaticMethod" factoryName=".NET Static Method" temporary="true">
+      <option name="EXE_PATH" value="D:\ide\JetBrains Rider 2020.2.4\lib\ReSharperHost\JetLauncherILc.exe" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="USE_MONO" value="0" />
+      <option name="RUNTIME_ARGUMENTS" value="" />
+      <option name="PROJECT_PATH" value="$PROJECT_DIR$/Assembly-CSharp.csproj" />
+      <option name="PROJECT_TFM" value=".NETFramework,Version=v4.7.1" />
+      <option name="CLASS_NAME" value="Test" />
+      <option name="METHOD_NAME" value="main" />
+      <method v="2">
+        <option name="Build" />
+      </method>
+    </configuration>
+    <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
+      <option name="EXE_PATH" value="$PROJECT_DIR$/../tmp\Entropy_peace_Unity.exe" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="D:\bishe\tmp" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <option name="selectedOptions">
+        <set />
+      </option>
+      <method v="2" />
+    </configuration>
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="5460">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" value="5460" />
+      <option name="selectedOptions">
+        <set />
+      </option>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue=".NET Static Method.Test.main" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c5c51e40-821b-468a-81ec-a5101bfe0f1e" name="Default Changelist" comment="" />
+      <created>1625049779868</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1625049779868</updated>
+      <workItem from="1625049786712" duration="35000" />
+      <workItem from="1625050032429" duration="4636000" />
+      <workItem from="1625163386655" duration="6272000" />
+      <workItem from="1625557159108" duration="23122000" />
+      <workItem from="1625765657000" duration="148000" />
+      <workItem from="1625765827107" duration="7016000" />
+      <workItem from="1626071569488" duration="1645000" />
+      <workItem from="1626077654223" duration="10281000" />
+      <workItem from="1626146088976" duration="4480000" />
+      <workItem from="1626227975782" duration="32210000" />
+      <workItem from="1626412230397" duration="546000" />
+      <workItem from="1626974153922" duration="6463000" />
+      <workItem from="1627315603082" duration="19677000" />
+      <workItem from="1627643103757" duration="12392000" />
+    </task>
+    <task id="LOCAL-00001" summary="联机的rpc服务">
+      <created>1625686618337</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1625686618337</updated>
+    </task>
+    <task id="LOCAL-00002" summary="联机的rpc服务">
+      <created>1625686640830</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1625686640830</updated>
+    </task>
+    <task id="LOCAL-00003" summary="bb">
+      <created>1626166528154</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1626166528154</updated>
+    </task>
+    <task id="LOCAL-00004" summary="新">
+      <created>1626167512216</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1626167512216</updated>
+    </task>
+    <task id="LOCAL-00005" summary="新">
+      <created>1626167568257</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1626167568257</updated>
+    </task>
+    <task id="LOCAL-00006" summary="新">
+      <created>1626167575475</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1626167575475</updated>
+    </task>
+    <task id="LOCAL-00007" summary="新">
+      <created>1626245888399</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1626245888399</updated>
+    </task>
+    <task id="LOCAL-00008" summary="新">
+      <created>1626315417340</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1626315417340</updated>
+    </task>
+    <task id="LOCAL-00009" summary="新">
+      <created>1626316277310</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1626316277310</updated>
+    </task>
+    <task id="LOCAL-00010" summary="新">
+      <created>1626316576053</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1626316576053</updated>
+    </task>
+    <task id="LOCAL-00011" summary="新">
+      <created>1626318257475</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1626318257475</updated>
+    </task>
+    <task id="LOCAL-00012" summary="新">
+      <created>1626319002915</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1626319002915</updated>
+    </task>
+    <task id="LOCAL-00013" summary="新">
+      <created>1626319548469</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1626319548469</updated>
+    </task>
+    <task id="LOCAL-00014" summary="新">
+      <created>1626319674156</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1626319674156</updated>
+    </task>
+    <task id="LOCAL-00015" summary="新">
+      <created>1626320495206</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1626320495206</updated>
+    </task>
+    <task id="LOCAL-00016" summary="新">
+      <created>1626321545312</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1626321545312</updated>
+    </task>
+    <task id="LOCAL-00017" summary="newGame">
+      <created>1626412355450</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1626412355450</updated>
+    </task>
+    <task id="LOCAL-00018" summary="fc">
+      <created>1626974938013</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1626974938013</updated>
+    </task>
+    <task id="LOCAL-00019" summary="fc">
+      <created>1627222050419</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1627222050419</updated>
+    </task>
+    <task id="LOCAL-00020" summary="fc">
+      <created>1627318998141</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1627318998141</updated>
+    </task>
+    <task id="LOCAL-00021" summary="fc">
+      <created>1627323383166</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1627323383166</updated>
+    </task>
+    <task id="LOCAL-00022" summary="fc">
+      <created>1627408177454</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1627408177454</updated>
+    </task>
+    <task id="LOCAL-00023" summary="fc">
+      <created>1627408388794</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1627408388794</updated>
+    </task>
+    <task id="LOCAL-00024" summary="fc">
+      <created>1627411269612</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1627411269612</updated>
+    </task>
+    <task id="LOCAL-00025" summary="fc">
+      <created>1627411361897</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1627411361897</updated>
+    </task>
+    <task id="LOCAL-00026" summary="fc">
+      <created>1627411456161</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1627411456161</updated>
+    </task>
+    <task id="LOCAL-00027" summary="fc">
+      <created>1627411471679</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1627411471679</updated>
+    </task>
+    <task id="LOCAL-00028" summary="fc">
+      <created>1627412167831</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1627412167831</updated>
+    </task>
+    <task id="LOCAL-00029" summary="fc">
+      <created>1627412635214</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1627412635214</updated>
+    </task>
+    <task id="LOCAL-00030" summary="fc">
+      <created>1627413258417</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1627413258417</updated>
+    </task>
+    <task id="LOCAL-00031" summary="fc">
+      <created>1627413665337</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1627413665337</updated>
+    </task>
+    <task id="LOCAL-00032" summary="fc">
+      <created>1627497073952</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1627497073952</updated>
+    </task>
+    <task id="LOCAL-00033" summary="fc">
+      <created>1627497976265</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1627497976265</updated>
+    </task>
+    <task id="LOCAL-00034" summary="fc">
+      <created>1627579907224</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1627579907224</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+    <MESSAGE value="联机的rpc服务" />
+    <MESSAGE value="bb" />
+    <MESSAGE value="新" />
+    <MESSAGE value="newGame" />
+    <MESSAGE value="fc" />
+    <option name="LAST_COMMIT_MESSAGE" value="fc" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="514" y="266" key="ANALYSIS_DLG_com.jetbrains.rider.actions.impl.cleanup.RiderCodeCleanupAction$actionPerformed$dlg$1" timestamp="1627581484383">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="514" y="266" key="ANALYSIS_DLG_com.jetbrains.rider.actions.impl.cleanup.RiderCodeCleanupAction$actionPerformed$dlg$1/0.0.1536.824@0.0.1536.824" timestamp="1627581484383" />
+    <state width="551" height="464" key="DebuggerActiveHint" timestamp="1627653645437">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="551" height="464" key="DebuggerActiveHint/0.0.1536.824@0.0.1536.824" timestamp="1627653645437" />
+    <state x="94" y="94" width="1349" height="637" key="DiffContextDialog" timestamp="1627411889041">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="94" y="94" width="1349" height="637" key="DiffContextDialog/0.0.1536.824@0.0.1536.824" timestamp="1627411889041" />
+    <state width="1493" height="211" key="GridCell.Tab.0.bottom" timestamp="1627653227290">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="211" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1627653227290" />
+    <state width="1493" height="211" key="GridCell.Tab.0.center" timestamp="1627653227288">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="211" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1627653227288" />
+    <state width="1493" height="211" key="GridCell.Tab.0.left" timestamp="1627653227287">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="211" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1627653227287" />
+    <state width="1493" height="211" key="GridCell.Tab.0.right" timestamp="1627653227289">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="211" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1627653227289" />
+    <state width="1493" height="236" key="GridCell.Tab.1.bottom" timestamp="1627652266923">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="236" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1627652266923" />
+    <state width="1493" height="236" key="GridCell.Tab.1.center" timestamp="1627652266922">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="236" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1627652266922" />
+    <state width="1493" height="236" key="GridCell.Tab.1.left" timestamp="1627652266922">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="236" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1627652266922" />
+    <state width="1493" height="236" key="GridCell.Tab.1.right" timestamp="1627652266922">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="236" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1627652266922" />
+    <state width="1493" height="236" key="GridCell.Tab.2.bottom" timestamp="1627652266924">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="236" key="GridCell.Tab.2.bottom/0.0.1536.824@0.0.1536.824" timestamp="1627652266924" />
+    <state width="1493" height="236" key="GridCell.Tab.2.center" timestamp="1627652266924">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="236" key="GridCell.Tab.2.center/0.0.1536.824@0.0.1536.824" timestamp="1627652266924" />
+    <state width="1493" height="236" key="GridCell.Tab.2.left" timestamp="1627652266924">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="236" key="GridCell.Tab.2.left/0.0.1536.824@0.0.1536.824" timestamp="1627652266924" />
+    <state width="1493" height="236" key="GridCell.Tab.2.right" timestamp="1627652266924">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="236" key="GridCell.Tab.2.right/0.0.1536.824@0.0.1536.824" timestamp="1627652266924" />
+    <state width="1493" height="236" key="GridCell.Tab.3.bottom" timestamp="1627652266925">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="236" key="GridCell.Tab.3.bottom/0.0.1536.824@0.0.1536.824" timestamp="1627652266925" />
+    <state width="1493" height="236" key="GridCell.Tab.3.center" timestamp="1627652266925">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="236" key="GridCell.Tab.3.center/0.0.1536.824@0.0.1536.824" timestamp="1627652266925" />
+    <state width="1493" height="236" key="GridCell.Tab.3.left" timestamp="1627652266924">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="236" key="GridCell.Tab.3.left/0.0.1536.824@0.0.1536.824" timestamp="1627652266924" />
+    <state width="1493" height="236" key="GridCell.Tab.3.right" timestamp="1627652266925">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="236" key="GridCell.Tab.3.right/0.0.1536.824@0.0.1536.824" timestamp="1627652266925" />
+    <state x="149" y="66" key="MergeDialog" timestamp="1626166600994">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="149" y="66" key="MergeDialog/0.0.1536.824@0.0.1536.824" timestamp="1626166600994" />
+    <state x="406" y="174" key="MultipleFileMergeDialog" timestamp="1627580171015">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="406" y="174" key="MultipleFileMergeDialog/0.0.1536.824@0.0.1536.824" timestamp="1627580171015" />
+    <state x="567" y="123" key="RollbackChangesDialog" timestamp="1627411821182">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="567" y="123" key="RollbackChangesDialog/0.0.1536.824@0.0.1536.824" timestamp="1627411821182" />
+    <state x="505" y="118" key="VCS.ChangeListViewerDialog" timestamp="1625558131951">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="505" y="118" key="VCS.ChangeListViewerDialog/0.0.1536.824@0.0.1536.824" timestamp="1625558131951" />
+    <state x="94" y="92" width="1345" height="639" key="VCS.FileHistoryDialog" timestamp="1626343071834">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="94" y="92" width="1345" height="639" key="VCS.FileHistoryDialog/0.0.1536.824@0.0.1536.824" timestamp="1626343071834" />
+    <state x="362" y="146" key="Vcs.Push.Dialog.v2" timestamp="1627497980403">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="362" y="146" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1627497980403" />
+    <state width="774" height="418" key="XDebugger.FullValuePopup" timestamp="1626319990089">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="774" height="418" key="XDebugger.FullValuePopup/0.0.1536.824@0.0.1536.824" timestamp="1626319990089" />
+    <state x="577" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1627579910023">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="577" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1627579910023" />
+    <state x="311" y="144" width="914" height="594" key="find.popup" timestamp="1627656040733">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="311" y="144" width="914" height="594" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1627656040733" />
+    <state x="524" y="126" key="git4idea.branch.GitSmartOperationDialog" timestamp="1626167555445">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="524" y="126" key="git4idea.branch.GitSmartOperationDialog/0.0.1536.824@0.0.1536.824" timestamp="1626167555445" />
+    <state x="586" y="311" key="git4idea.ui.GitStashDialog" timestamp="1626166327664">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="586" y="311" key="git4idea.ui.GitStashDialog/0.0.1536.824@0.0.1536.824" timestamp="1626166327664" />
+    <state x="586" y="259" key="git4idea.ui.GitUnstashDialog" timestamp="1626166601163">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="586" y="259" key="git4idea.ui.GitUnstashDialog/0.0.1536.824@0.0.1536.824" timestamp="1626166601163" />
+    <state x="426" y="188" key="run.anything.popup" timestamp="1625769756211">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="426" y="188" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1625769756211" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1627235194740">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1627235194740" />
+    <state x="492" y="326" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1625559826949">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="492" y="326" key="vcs.readOnlyHandler.ReadOnlyStatusDialog/0.0.1536.824@0.0.1536.824" timestamp="1625559826949" />
+  </component>
+</project>

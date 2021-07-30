@@ -1,0 +1,760 @@
+Using pre-set license
+Built from '2020.3/china_unity/release' branch; Version is '2020.3.0f1c1 (1e553bf703d9) revision 1987899'; Using compiler version '192528614'; Build Type 'Release'
+OS: 'Windows 10 Home China; OS build 19042.1110; Version 2009; 64bit' Language: 'zh' Physical Memory: 16165 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
+
+ COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\2020.3.0f1c1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker0
+-projectPath
+D:/bishe/Entropy_peace_Unity
+-logFile
+Logs/AssetImportWorker0.log
+-srvPort
+51343
+Successfully changed project path to: D:/bishe/Entropy_peace_Unity
+D:/bishe/Entropy_peace_Unity
+Using Asset Import Pipeline V2.
+Refreshing native plugins compatible for Editor in 61.17 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2020.3.0f1c1 (1e553bf703d9)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.3.0f1c1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path D:/bishe/Entropy_peace_Unity/Assets
+GfxDevice: creating device client; threaded=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce RTX 2060 (ID=0x1f15)
+    Vendor:   
+    VRAM:     5980 MB
+    Driver:   27.21.14.5167
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.3.0f1c1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.3.0f1c1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.3.0f1c1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56892
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.0f1c1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.002270 seconds.
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 85.81 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.503 seconds
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.004716 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 41.25 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.510 seconds
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Shader 'Custom/Sea': fallback shader 'Hidden/Universal Render Pipeline/FallbackError' not found
+Shader 'Custom/Sea': fallback shader 'Hidden/Universal Render Pipeline/FallbackError' not found
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
+Refreshing native plugins compatible for Editor in 0.51 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2369 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 101.9 MB.
+System memory in use after: 102.0 MB.
+
+Unloading 20 unused Assets to reduce memory usage. Loaded Objects now: 2804.
+Total: 2.805500 ms (FindLiveObjects: 0.669000 ms CreateObjectMapping: 0.130200 ms MarkObjects: 1.843000 ms  DeleteObjects: 0.158800 ms)
+
+========================================================================
+Received Import Request.
+  path: Assets/Main/ARTDEMO/素材/模型素材/装饰/scene_table.fbx
+  artifactKey: Guid(20dac6256f9f92a43963ed7959c8fd3c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Main/ARTDEMO/素材/模型素材/装饰/scene_table.fbx using Guid(20dac6256f9f92a43963ed7959c8fd3c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ce5d2e061a4ef1ccfa1e2759c39d7731') in 1.216176 seconds
+  Import took 1.225822 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000599 seconds.
+  path: Assets/Main/ARTDEMO/素材/模型素材/装饰/difang.fbx
+  artifactKey: Guid(ae440fc6631e3504e9c692278b8dbdbe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Main/ARTDEMO/素材/模型素材/装饰/difang.fbx using Guid(ae440fc6631e3504e9c692278b8dbdbe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '16ce4f36b3e3704290cd240b7daa0de6') in 0.111556 seconds
+  Import took 0.135792 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 192.611872 seconds.
+  path: Assets/Main/ARTDEMO
+  artifactKey: Guid(1228fc6fc6c75e64cae760f0e73c2661) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Main/ARTDEMO using Guid(1228fc6fc6c75e64cae760f0e73c2661) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '352d9e8e5c22b01b9cafa2fa99dff9f4') in 0.011862 seconds
+  Import took 0.028521 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.880015 seconds.
+  path: Assets/Main/ARTDEMO/Main.unity
+  artifactKey: Guid(6ee719310ac846f41a24ce809b88d08d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Main/ARTDEMO/Main.unity using Guid(6ee719310ac846f41a24ce809b88d08d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4ebad15d2f670a23a810bdf8302a55d4') in 0.020718 seconds
+  Import took 0.035130 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.118257 seconds.
+  path: Assets/Main/ARTDEMO/Prefab
+  artifactKey: Guid(55e40060a93c7c94e91e384369c27d4c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Main/ARTDEMO/Prefab using Guid(55e40060a93c7c94e91e384369c27d4c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ba6da3d810831f11a3d0faf2d972e38d') in 0.015219 seconds
+  Import took 0.025238 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.083488 seconds.
+  path: Assets/Main/ARTDEMO/Prefab/ChessbassA.prefab
+  artifactKey: Guid(185dd0a107feed948ae0cded53d9aa2b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Main/ARTDEMO/Prefab/ChessbassA.prefab using Guid(185dd0a107feed948ae0cded53d9aa2b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '31aa147860d1d5bc6949f22c1750a2a8') in 0.034895 seconds
+  Import took 0.043838 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000338 seconds.
+  path: Assets/Main/ARTDEMO/Prefab/ChessbassB.prefab
+  artifactKey: Guid(f5c33b9187c012a419f0d56a04d8da65) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Main/ARTDEMO/Prefab/ChessbassB.prefab using Guid(f5c33b9187c012a419f0d56a04d8da65) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '877f92c9ce080d3fa4714d85b51a8464') in 0.023502 seconds
+  Import took 0.030601 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 82.215691 seconds.
+  path: Assets/Main/ARTDEMO/素材
+  artifactKey: Guid(817c81e8de8ef7f4ab36843819d8ff89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Main/ARTDEMO/素材 using Guid(817c81e8de8ef7f4ab36843819d8ff89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8d132d645527af361f0370d8af7f080c') in 0.014788 seconds
+  Import took 0.027737 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000384 seconds.
+  path: Assets/Main/ARTDEMO/素材
+  artifactKey: Guid(817c81e8de8ef7f4ab36843819d8ff89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Main/ARTDEMO/素材 using Guid(817c81e8de8ef7f4ab36843819d8ff89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8d132d645527af361f0370d8af7f080c') in 0.003143 seconds
+  Import took 0.011135 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.720956 seconds.
+  path: Assets/Main/ARTDEMO/素材/模型素材
+  artifactKey: Guid(c6a2affba9b1c514183ac2bfd9753e40) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Main/ARTDEMO/素材/模型素材 using Guid(c6a2affba9b1c514183ac2bfd9753e40) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5d5eac9ddb8d07b828234164e6085a1f') in 0.008344 seconds
+  Import took 0.019770 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000799 seconds.
+  path: Assets/Main/ARTDEMO/素材/模型素材
+  artifactKey: Guid(c6a2affba9b1c514183ac2bfd9753e40) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Main/ARTDEMO/素材/模型素材 using Guid(c6a2affba9b1c514183ac2bfd9753e40) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5d5eac9ddb8d07b828234164e6085a1f') in 0.001749 seconds
+  Import took 0.005685 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.908218 seconds.
+  path: Assets/Main/ARTDEMO/素材/模型素材/low-poly-terrain
+  artifactKey: Guid(444bf12c2eae77b4f82c220fd871edce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Main/ARTDEMO/素材/模型素材/low-poly-terrain using Guid(444bf12c2eae77b4f82c220fd871edce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ee513d8125851f29abd4ea72ff4f00cb') in 0.015736 seconds
+  Import took 0.022043 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.075762 seconds.
+  path: Assets/Main/ARTDEMO/素材/模型素材/low-poly-terrain/source
+  artifactKey: Guid(06cb8d6ced48cdf40bd23c7723896d5c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Main/ARTDEMO/素材/模型素材/low-poly-terrain/source using Guid(06cb8d6ced48cdf40bd23c7723896d5c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '401f2304f1addef9f0fde462488f8d42') in 0.022214 seconds
+  Import took 0.029446 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.466253 seconds.
+  path: Assets/Main/ARTDEMO/素材/模型素材/low-poly-terrain/source/Terrain.fbx
+  artifactKey: Guid(e4f6fe2fbcf9c424d8cf447c5f3da1b8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Main/ARTDEMO/素材/模型素材/low-poly-terrain/source/Terrain.fbx using Guid(e4f6fe2fbcf9c424d8cf447c5f3da1b8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '152fe751271e29fd1b6ced65d15ee791') in 0.077788 seconds
+  Import took 0.086639 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.009293 seconds.
+  path: Assets/Main/ARTDEMO/素材/模型素材/装饰
+  artifactKey: Guid(ffce77bc7c59654439e72fa51f16d93c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Main/ARTDEMO/素材/模型素材/装饰 using Guid(ffce77bc7c59654439e72fa51f16d93c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0450319ff6cf68ddd41d67ea4e99213a') in 0.013208 seconds
+  Import took 0.023794 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.548010 seconds.
+  path: Assets/Main/ARTDEMO/素材/模型素材/棋盘底座.blend
+  artifactKey: Guid(ddf89fddbfc333848b36b7abecb76f9c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Main/ARTDEMO/素材/模型素材/棋盘底座.blend using Guid(ddf89fddbfc333848b36b7abecb76f9c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b5b604705387492c83802b6fd0918ef9') in 0.013994 seconds
+  Import took 0.021364 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 566.114762 seconds.
+  path: Assets/Main/Prefab/ChessbassA.prefab
+  artifactKey: Guid(3484edc23bc1fde409345e1726d3721e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Main/Prefab/ChessbassA.prefab using Guid(3484edc23bc1fde409345e1726d3721e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '32ce3c5668bad6ad3bfa0e0af66da412') in 0.008927 seconds
+  Import took 0.016156 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000279 seconds.
+  path: Assets/Main/Prefab/ChessbassB.prefab
+  artifactKey: Guid(b189f5a46c441094a8ff45f7d0307394) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Main/Prefab/ChessbassB.prefab using Guid(b189f5a46c441094a8ff45f7d0307394) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9a3b678e8e1c51e270d44fba9e302823') in 0.005672 seconds
+  Import took 0.011955 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 17.328202 seconds.
+  path: Assets/Main/FinalPrefab/农场.prefab
+  artifactKey: Guid(0f4e51ff5b3dd9d41a863a447e811b04) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Main/FinalPrefab/农场.prefab using Guid(0f4e51ff5b3dd9d41a863a447e811b04) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0938432481f9775589f85cf568921d70') in 0.015868 seconds
+  Import took 0.026831 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000274 seconds.
+  path: Assets/Main/FinalPrefab/新能源.prefab
+  artifactKey: Guid(fa5052321445fd845b1f3ddb44957e7b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Main/FinalPrefab/新能源.prefab using Guid(fa5052321445fd845b1f3ddb44957e7b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cd7617a337fc438e12bab3d1b650a931') in 0.019344 seconds
+  Import took 0.026194 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000451 seconds.
+  path: Assets/Main/FinalPrefab/电厂.prefab
+  artifactKey: Guid(16957c6f77bdaf54cae64dfa7249c9cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Main/FinalPrefab/电厂.prefab using Guid(16957c6f77bdaf54cae64dfa7249c9cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8264eae4b1f57d2af0d6383188676c5f') in 0.023091 seconds
+  Import took 0.037486 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000704 seconds.
+  path: Assets/Main/FinalPrefab/净化塔.prefab
+  artifactKey: Guid(412579b785980384c98fbee3027ac7c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Main/FinalPrefab/净化塔.prefab using Guid(412579b785980384c98fbee3027ac7c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0c79ecf225f94c4928c889a189b09598') in 0.015126 seconds
+  Import took 0.022186 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000408 seconds.
+  path: Assets/Main/FinalPrefab/工厂.prefab
+  artifactKey: Guid(adfe57f5b3c28264c91783d1efac8286) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Main/FinalPrefab/工厂.prefab using Guid(adfe57f5b3c28264c91783d1efac8286) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '697b886a31eecb1e726d3456ccfe8625') in 0.023256 seconds
+  Import took 0.033040 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 273.462238 seconds.
+  path: Assets/Main/Scenes/Welcome.unity
+  artifactKey: Guid(468808fd9b6fa5e49b717e087d3280cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Main/Scenes/Welcome.unity using Guid(468808fd9b6fa5e49b717e087d3280cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8f45e162c24b520f0239695bc1cbedab') in 0.003231 seconds
+  Import took 0.011467 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002915 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.46 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.933 seconds
+Platform modules already initialized, skipping
+Shader 'Custom/Sea': fallback shader 'Hidden/Universal Render Pipeline/FallbackError' not found
+Shader 'Custom/Sea': fallback shader 'Hidden/Universal Render Pipeline/FallbackError' not found
+Refreshing native plugins compatible for Editor in 0.50 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2359 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 105.1 MB.
+System memory in use after: 105.3 MB.
+
+Unloading 15 unused Assets to reduce memory usage. Loaded Objects now: 2853.
+Total: 2.155300 ms (FindLiveObjects: 0.443600 ms CreateObjectMapping: 0.112000 ms MarkObjects: 1.551500 ms  DeleteObjects: 0.047000 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003731 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.52 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.094 seconds
+Platform modules already initialized, skipping
+Shader 'Custom/Sea': fallback shader 'Hidden/Universal Render Pipeline/FallbackError' not found
+Shader 'Custom/Sea': fallback shader 'Hidden/Universal Render Pipeline/FallbackError' not found
+Refreshing native plugins compatible for Editor in 0.42 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2358 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 105.1 MB.
+System memory in use after: 105.3 MB.
+
+Unloading 15 unused Assets to reduce memory usage. Loaded Objects now: 2856.
+Total: 2.432900 ms (FindLiveObjects: 0.472900 ms CreateObjectMapping: 0.145300 ms MarkObjects: 1.735300 ms  DeleteObjects: 0.077900 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.004159 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.42 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.947 seconds
+Platform modules already initialized, skipping
+Shader 'Custom/Sea': fallback shader 'Hidden/Universal Render Pipeline/FallbackError' not found
+Shader 'Custom/Sea': fallback shader 'Hidden/Universal Render Pipeline/FallbackError' not found
+Refreshing native plugins compatible for Editor in 0.43 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2358 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 105.2 MB.
+System memory in use after: 105.3 MB.
+
+Unloading 15 unused Assets to reduce memory usage. Loaded Objects now: 2859.
+Total: 2.184700 ms (FindLiveObjects: 0.238000 ms CreateObjectMapping: 0.097200 ms MarkObjects: 1.793000 ms  DeleteObjects: 0.055600 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 555.578135 seconds.
+  path: Assets/Main/Scenes/Welcome.unity
+  artifactKey: Guid(468808fd9b6fa5e49b717e087d3280cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Main/Scenes/Welcome.unity using Guid(468808fd9b6fa5e49b717e087d3280cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8fd06f54ef812af44947c3bd03f81120') in 0.021000 seconds
+  Import took 0.031206 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002126 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.40 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.049 seconds
+Platform modules already initialized, skipping
+Shader 'Custom/Sea': fallback shader 'Hidden/Universal Render Pipeline/FallbackError' not found
+Shader 'Custom/Sea': fallback shader 'Hidden/Universal Render Pipeline/FallbackError' not found
+Refreshing native plugins compatible for Editor in 0.43 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2358 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 105.2 MB.
+System memory in use after: 105.4 MB.
+
+Unloading 15 unused Assets to reduce memory usage. Loaded Objects now: 2862.
+Total: 2.219900 ms (FindLiveObjects: 0.247000 ms CreateObjectMapping: 0.103300 ms MarkObjects: 1.813000 ms  DeleteObjects: 0.055500 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 1525.591649 seconds.
+  path: Assets/Main/结算界面 ui
+  artifactKey: Guid(3a785a67008ea2e478596158c3645965) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Main/结算界面 ui using Guid(3a785a67008ea2e478596158c3645965) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '913d3e2eda9e47dc9fabdeb56a435b6a') in 0.014197 seconds
+  Import took 0.020487 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.856333 seconds.
+  path: Assets/Main/结算界面 ui/结算界面 ui
+  artifactKey: Guid(41472ffb047772f4c9c75cc53208f741) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Main/结算界面 ui/结算界面 ui using Guid(41472ffb047772f4c9c75cc53208f741) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '44964bcc7ba252f1b56e949ad7bf1841') in 0.002195 seconds
+  Import took 0.008616 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000862 seconds.
+  path: Assets/Main/结算界面 ui/结算界面 ui
+  artifactKey: Guid(41472ffb047772f4c9c75cc53208f741) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Main/结算界面 ui/结算界面 ui using Guid(41472ffb047772f4c9c75cc53208f741) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '44964bcc7ba252f1b56e949ad7bf1841') in 0.004389 seconds
+  Import took 0.010811 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.107416 seconds.
+  path: Assets/Main/结算界面 ui/结算界面 ui/blueresult_playponce.gif
+  artifactKey: Guid(d9824ec29de7e6745812f400aa1812af) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Main/结算界面 ui/结算界面 ui/blueresult_playponce.gif using Guid(d9824ec29de7e6745812f400aa1812af) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '97e79c19381413d6a2bb631974c824c3') in 0.072158 seconds
+  Import took 0.076026 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000197 seconds.
+  path: Assets/Main/结算界面 ui/结算界面 ui/btn_green.png
+  artifactKey: Guid(35b93c0f22313ca4eaf275369a107097) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Main/结算界面 ui/结算界面 ui/btn_green.png using Guid(35b93c0f22313ca4eaf275369a107097) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0d294814660d58ea04306db7517cba54') in 0.013414 seconds
+  Import took 0.017522 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000199 seconds.
+  path: Assets/Main/结算界面 ui/结算界面 ui/pic_redbg.png
+  artifactKey: Guid(0a1b41f8a9bce45419b7385952280b5a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Main/结算界面 ui/结算界面 ui/pic_redbg.png using Guid(0a1b41f8a9bce45419b7385952280b5a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '47b24431525f947081f532c6f1147bb7') in 0.034503 seconds
+  Import took 0.038715 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000222 seconds.
+  path: Assets/Main/结算界面 ui/结算界面 ui/pic_greenbg.png
+  artifactKey: Guid(2f343a7913d1ed246af75b7628df4997) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Main/结算界面 ui/结算界面 ui/pic_greenbg.png using Guid(2f343a7913d1ed246af75b7628df4997) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9fdb8db064c79329fc3ce8e85b35ffe4') in 0.026659 seconds
+  Import took 0.039065 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000762 seconds.
+  path: Assets/Main/结算界面 ui/结算界面 ui/pic_moneyx.png
+  artifactKey: Guid(b7fd56f5b5e06554b81504cd0f1b9d77) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Main/结算界面 ui/结算界面 ui/pic_moneyx.png using Guid(b7fd56f5b5e06554b81504cd0f1b9d77) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'daf48ab65bd993d32b4f4e1484ea6c54') in 0.018624 seconds
+  Import took 0.025024 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000318 seconds.
+  path: Assets/Main/结算界面 ui/结算界面 ui/pic_bluebg.png
+  artifactKey: Guid(c260140c6c3c42547a25ea29534a5e5c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Main/结算界面 ui/结算界面 ui/pic_bluebg.png using Guid(c260140c6c3c42547a25ea29534a5e5c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f91865e7712dcc2fc7a84144d271bfce') in 0.025407 seconds
+  Import took 0.031511 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000347 seconds.
+  path: Assets/Main/结算界面 ui/结算界面 ui/greenresult_playponce.gif
+  artifactKey: Guid(20ca02b564f05e143bfb855327387e7d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Main/结算界面 ui/结算界面 ui/greenresult_playponce.gif using Guid(20ca02b564f05e143bfb855327387e7d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ec55534e28bd53688b85f28eed64e5fb') in 0.030807 seconds
+  Import took 0.035536 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.001108 seconds.
+  path: Assets/Main/结算界面 ui/结算界面 ui/btn_blue.png
+  artifactKey: Guid(ced5aaa02b884994698899ab19859fd8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Main/结算界面 ui/结算界面 ui/btn_blue.png using Guid(ced5aaa02b884994698899ab19859fd8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '61ca273386d64714b8020c35aa18b850') in 0.026234 seconds
+  Import took 0.040883 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000334 seconds.
+  path: Assets/Main/结算界面 ui/结算界面 ui/pic_red.png
+  artifactKey: Guid(18a8156bec80a944cb81787e03fe628e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Main/结算界面 ui/结算界面 ui/pic_red.png using Guid(18a8156bec80a944cb81787e03fe628e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd61e7f6983f5b82cc06e4f5a8ada0adc') in 0.029079 seconds
+  Import took 0.038072 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000283 seconds.
+  path: Assets/Main/结算界面 ui/结算界面 ui/Canvas.prefab
+  artifactKey: Guid(b371aaa503ddc384f8f0627b09e0838b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Main/结算界面 ui/结算界面 ui/Canvas.prefab using Guid(b371aaa503ddc384f8f0627b09e0838b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '52cb25502730fe43252bcd18bd82fa86') in 0.047951 seconds
+  Import took 0.053639 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 56.843654 seconds.
+  path: Assets/Main/结算界面 ui/结算界面 ui/Canvas.prefab
+  artifactKey: Guid(b371aaa503ddc384f8f0627b09e0838b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Main/结算界面 ui/结算界面 ui/Canvas.prefab using Guid(b371aaa503ddc384f8f0627b09e0838b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9a1f1c9041d37cbd324287cff820d1ed') in 0.008881 seconds
+  Import took 0.012230 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002208 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.75 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.906 seconds
+Platform modules already initialized, skipping
+Shader 'Custom/Sea': fallback shader 'Hidden/Universal Render Pipeline/FallbackError' not found
+Shader 'Custom/Sea': fallback shader 'Hidden/Universal Render Pipeline/FallbackError' not found
+Refreshing native plugins compatible for Editor in 0.56 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2358 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 105.2 MB.
+System memory in use after: 105.4 MB.
+
+Unloading 15 unused Assets to reduce memory usage. Loaded Objects now: 2879.
+Total: 2.152400 ms (FindLiveObjects: 0.305700 ms CreateObjectMapping: 0.138300 ms MarkObjects: 1.656000 ms  DeleteObjects: 0.051400 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002176 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.00 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.130 seconds
+Platform modules already initialized, skipping
+Shader 'Custom/Sea': fallback shader 'Hidden/Universal Render Pipeline/FallbackError' not found
+Shader 'Custom/Sea': fallback shader 'Hidden/Universal Render Pipeline/FallbackError' not found
+Refreshing native plugins compatible for Editor in 0.44 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2358 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 105.3 MB.
+System memory in use after: 105.5 MB.
+
+Unloading 15 unused Assets to reduce memory usage. Loaded Objects now: 2882.
+Total: 2.416200 ms (FindLiveObjects: 0.318500 ms CreateObjectMapping: 0.114900 ms MarkObjects: 1.910200 ms  DeleteObjects: 0.071200 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002777 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.44 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.909 seconds
+Platform modules already initialized, skipping
+Shader 'Custom/Sea': fallback shader 'Hidden/Universal Render Pipeline/FallbackError' not found
+Shader 'Custom/Sea': fallback shader 'Hidden/Universal Render Pipeline/FallbackError' not found
+Refreshing native plugins compatible for Editor in 0.56 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2358 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 105.3 MB.
+System memory in use after: 105.5 MB.
+
+Unloading 15 unused Assets to reduce memory usage. Loaded Objects now: 2885.
+Total: 2.139200 ms (FindLiveObjects: 0.334500 ms CreateObjectMapping: 0.099800 ms MarkObjects: 1.647600 ms  DeleteObjects: 0.055800 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002580 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.40 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.885 seconds
+Platform modules already initialized, skipping
+Shader 'Custom/Sea': fallback shader 'Hidden/Universal Render Pipeline/FallbackError' not found
+Shader 'Custom/Sea': fallback shader 'Hidden/Universal Render Pipeline/FallbackError' not found
+Refreshing native plugins compatible for Editor in 0.42 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2358 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 105.3 MB.
+System memory in use after: 105.5 MB.
+
+Unloading 15 unused Assets to reduce memory usage. Loaded Objects now: 2888.
+Total: 2.097700 ms (FindLiveObjects: 0.280800 ms CreateObjectMapping: 0.112200 ms MarkObjects: 1.651000 ms  DeleteObjects: 0.052900 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002384 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.41 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.873 seconds
+Platform modules already initialized, skipping
+Shader 'Custom/Sea': fallback shader 'Hidden/Universal Render Pipeline/FallbackError' not found
+Shader 'Custom/Sea': fallback shader 'Hidden/Universal Render Pipeline/FallbackError' not found
+Refreshing native plugins compatible for Editor in 0.41 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2358 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 105.3 MB.
+System memory in use after: 105.5 MB.
+
+Unloading 15 unused Assets to reduce memory usage. Loaded Objects now: 2891.
+Total: 1.985200 ms (FindLiveObjects: 0.256700 ms CreateObjectMapping: 0.096000 ms MarkObjects: 1.582900 ms  DeleteObjects: 0.048800 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002373 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.40 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.884 seconds
+Platform modules already initialized, skipping
+Shader 'Custom/Sea': fallback shader 'Hidden/Universal Render Pipeline/FallbackError' not found
+Shader 'Custom/Sea': fallback shader 'Hidden/Universal Render Pipeline/FallbackError' not found
+Refreshing native plugins compatible for Editor in 0.54 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2358 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 105.2 MB.
+System memory in use after: 105.4 MB.
+
+Unloading 15 unused Assets to reduce memory usage. Loaded Objects now: 2894.
+Total: 2.558300 ms (FindLiveObjects: 0.312000 ms CreateObjectMapping: 0.113900 ms MarkObjects: 2.009400 ms  DeleteObjects: 0.097700 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002444 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.43 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.926 seconds
+Platform modules already initialized, skipping
+Shader 'Custom/Sea': fallback shader 'Hidden/Universal Render Pipeline/FallbackError' not found
+Shader 'Custom/Sea': fallback shader 'Hidden/Universal Render Pipeline/FallbackError' not found
+Refreshing native plugins compatible for Editor in 0.48 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2358 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 105.3 MB.
+System memory in use after: 105.5 MB.
+
+Unloading 15 unused Assets to reduce memory usage. Loaded Objects now: 2897.
+Total: 2.356400 ms (FindLiveObjects: 0.239500 ms CreateObjectMapping: 0.103700 ms MarkObjects: 1.960500 ms  DeleteObjects: 0.051900 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002360 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.40 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.831 seconds
+Platform modules already initialized, skipping
+Shader 'Custom/Sea': fallback shader 'Hidden/Universal Render Pipeline/FallbackError' not found
+Shader 'Custom/Sea': fallback shader 'Hidden/Universal Render Pipeline/FallbackError' not found
+Refreshing native plugins compatible for Editor in 0.43 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2358 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 105.3 MB.
+System memory in use after: 105.5 MB.
+
+Unloading 15 unused Assets to reduce memory usage. Loaded Objects now: 2900.
+Total: 2.265900 ms (FindLiveObjects: 0.395300 ms CreateObjectMapping: 0.121300 ms MarkObjects: 1.689000 ms  DeleteObjects: 0.058700 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 1896.561800 seconds.
+  path: Assets/Main/Scenes/Welcome.unity
+  artifactKey: Guid(468808fd9b6fa5e49b717e087d3280cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Main/Scenes/Welcome.unity using Guid(468808fd9b6fa5e49b717e087d3280cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '292bb1a613be65031ef376736b7ce452') in 0.016690 seconds
+  Import took 0.020830 seconds .
+
+========================================================================
+Received Prepare
+Shader 'Custom/Sea': fallback shader 'Hidden/Universal Render Pipeline/FallbackError' not found
+Shader 'Custom/Sea': fallback shader 'Hidden/Universal Render Pipeline/FallbackError' not found
+Refreshing native plugins compatible for Editor in 2.01 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 59.1 MB.
+System memory in use after: 59.3 MB.
+
+Unloading 13 unused Assets to reduce memory usage. Loaded Objects now: 2900.
+Total: 3.183400 ms (FindLiveObjects: 0.263900 ms CreateObjectMapping: 0.155800 ms MarkObjects: 2.649700 ms  DeleteObjects: 0.113400 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002919 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.45 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.051 seconds
+Platform modules already initialized, skipping
+Shader 'Custom/Sea': fallback shader 'Hidden/Universal Render Pipeline/FallbackError' not found
+Shader 'Custom/Sea': fallback shader 'Hidden/Universal Render Pipeline/FallbackError' not found
+Refreshing native plugins compatible for Editor in 0.43 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2358 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 105.3 MB.
+System memory in use after: 105.5 MB.
+
+Unloading 15 unused Assets to reduce memory usage. Loaded Objects now: 2903.
+Total: 5.332700 ms (FindLiveObjects: 2.141500 ms CreateObjectMapping: 0.830300 ms MarkObjects: 2.288500 ms  DeleteObjects: 0.069700 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002644 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.42 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.887 seconds
+Platform modules already initialized, skipping
+Shader 'Custom/Sea': fallback shader 'Hidden/Universal Render Pipeline/FallbackError' not found
+Shader 'Custom/Sea': fallback shader 'Hidden/Universal Render Pipeline/FallbackError' not found
+Refreshing native plugins compatible for Editor in 0.43 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2358 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 105.4 MB.
+System memory in use after: 105.5 MB.
+
+Unloading 15 unused Assets to reduce memory usage. Loaded Objects now: 2906.
+Total: 2.427700 ms (FindLiveObjects: 0.410700 ms CreateObjectMapping: 0.100700 ms MarkObjects: 1.849300 ms  DeleteObjects: 0.065800 ms)
+
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
